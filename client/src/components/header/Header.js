@@ -8,11 +8,12 @@ class Header extends Component {
     return (
       <div id="header">
         <Hamburger />
+        <div className="right">
+          {this.renderLogin()}
+        </div>
       </div>
     );
   }
-
-  // {this.renderLogin()}
 
   renderLogin() {
     return this.props.auth
@@ -22,9 +23,9 @@ class Header extends Component {
 
   renderLoginButtons() {
     return (
-      <ul className="right">
+      <ul>
         <li>
-          <a href="/auth/facebook">Login With Facebook</a>
+          <a href="/auth/facebook">Login</a>
         </li>
       </ul>
     );
@@ -32,7 +33,7 @@ class Header extends Component {
 
   renderLogoutButton() {
     return (
-      <ul className="right">
+      <ul>
         <li>
           <a href="/api/logout">Logout</a>
         </li>

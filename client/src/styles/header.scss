@@ -1,4 +1,21 @@
 #header {
-  //   display: flex;
-  //   border: solid purple;
+  .right {
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 36px;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        a {
+          color: #222;
+        }
+      }
+    }
+  }
 }
