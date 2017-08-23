@@ -1,36 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import { Hamburger } from '../';
 
 class Header extends Component {
   render() {
     return (
-      <nav>
-        <div className="nav-wrapper">
-          {this.renderLogo()}
-          {this.renderLogin()}
-        </div>
-      </nav>
+      <div id="header">
+        <Hamburger />
+      </div>
     );
   }
 
-  renderLogo() {
-    return (
-      <Link to={this.props.auth ? '/surveys' : '/'} className="left brand-logo">
-        Emaily
-      </Link>
-    );
-  }
+  // {this.renderLogin()}
 
   renderLogin() {
-    switch (this.props.auth) {
-      case null:
-        return;
-      case false:
-        return this.renderLoginButtons();
-      default:
-        return this.renderLogoutButton();
-    }
+    return this.props.auth
+      ? this.renderLogoutButton()
+      : this.renderLoginButtons();
   }
 
   renderLoginButtons() {
