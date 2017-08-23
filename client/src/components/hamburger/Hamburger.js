@@ -7,6 +7,9 @@ export default class Hamburger extends Component {
     return (
       <div className="hamburger">
         <Menu noOverlay>
+          <a id="home" className="menu-item" href="/">
+            Home
+          </a>
           <a id="story" className="menu-item" href="/story">
             Our Story
           </a>

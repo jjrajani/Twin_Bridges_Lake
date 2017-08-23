@@ -1,6 +1,6 @@
 .landing {
   position: relative;
-  min-height: 90vh;
+  height: calc(100vh - 100px);
   padding: 60px 0 0;
   .header {
     margin-bottom: 50px;
@@ -9,11 +9,10 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 0 36px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 }
