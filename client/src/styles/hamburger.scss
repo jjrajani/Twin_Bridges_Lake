@@ -6,6 +6,9 @@
     height: 30px;
     left: 36px;
     top: 36px;
+    button {
+      cursor: pointer;
+    }
   }
 
   /* Color/shape of burger icon bars */
@@ -17,6 +20,9 @@
   .bm-cross-button {
     height: 24px;
     width: 24px;
+    button {
+      cursor: pointer;
+    }
   }
 
   /* Color/shape of close button cross */

@@ -6,8 +6,24 @@ body {
   margin: 0;
   padding: 0;
 }
+
+* {
+  color: #222;
+}
+
 a {
   text-decoration: none;
 }
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
 @import 'header.scss';
 @import 'hamburger.scss';
+@import 'landing.scss';
