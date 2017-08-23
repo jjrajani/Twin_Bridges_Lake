@@ -25,11 +25,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 /* Auth Services */
-require('./services/passportGoogle');
+// require('./services/passportGoogle');
 require('./services/passportFacebook');
 
 /* Auth Routes */
-require('./routes/authGoogleRoutes')(app);
+// require('./routes/authGoogleRoutes')(app);
 require('./routes/authFacebookRoutes')(app);
 require('./routes/currentUserRoutes')(app);
 
