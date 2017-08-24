@@ -40,13 +40,21 @@ class Landing extends Component {
           <h2>Family Fishing & Monster Catfish</h2>
         </div>
         <div className="center col">
-          <h3>My Fish</h3>
-          <h3>My Rewards</h3>
+          <Link to="/">
+            <h3>My Fish</h3>
+          </Link>
+          <Link to="/">
+            <h3>My Rewards</h3>
+          </Link>
           <Link to="/recently_caught">
             <h3>Recently Caught</h3>
           </Link>
-          <h3>Location</h3>
-          <h3>Admissions</h3>
+          <Link to="/">
+            <h3>Location</h3>
+          </Link>
+          <Link to="/">
+            <h3>Admissions</h3>
+          </Link>
         </div>
         <div className="footer">
           <h4>1119 Braselton Hwy, Lawrenceville Ga, 30043</h4>
