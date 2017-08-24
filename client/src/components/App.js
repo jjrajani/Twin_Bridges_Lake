@@ -3,7 +3,14 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-import { Header, Landing, RecentlyCaught } from './';
+import {
+  Header,
+  Landing,
+  RecentlyCaught,
+  ReviewsList,
+  ReviewsDetail,
+  ReviewsNew
+} from './';
 
 class App extends Component {
   componentDidMount() {
@@ -17,6 +24,7 @@ class App extends Component {
           <div>
             <Header />
             <Route exact path="/" component={Landing} />
+            <Route exact path="/reviews" component={ReviewsList} />
             <Route exact path="/recently_caught" component={RecentlyCaught} />
           </div>
         </BrowserRouter>
