@@ -7,9 +7,9 @@ import {
   Header,
   Landing,
   RecentlyCaught,
-  ReviewsList,
-  ReviewsDetail,
-  ReviewsNew
+  ReviewsList
+  // ReviewsDetail
+  // ReviewsNew
 } from './';
 
 class App extends Component {

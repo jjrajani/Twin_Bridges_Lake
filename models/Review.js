@@ -4,7 +4,8 @@ const { Schema } = mongoose;
 const reviewSchema = new Schema({
   review: String,
   rating: Number,
-  user: String
+  user: String,
+  createdAt: Date
 });
 
 mongoose.model('reviews', reviewSchema);

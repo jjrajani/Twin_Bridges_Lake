@@ -1,28 +1,29 @@
 import React, { Component } from 'react';
-import REVIEWS from './reviews';
+import { connect } from 'react-redux';
 import ReviewsDetail from './ReviewsDetail';
+import * as actions from '../../actions';
 
 class ReviewsList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { reviews: [] };
-  }
   componentDidMount() {
-    this.setState({ reviews: REVIEWS });
+    this.props.fetchReviews();
   }
 
   render() {
-    if (!this.state.reviews) {
+    if (this.props.reviews.length <= 0) {
       return <div>Loading...</div>;
     }
     return (
       <ul>
-        {this.state.reviews.map(r => {
-          return <ReviewsDetail key={r.id} review={r} />;
+        {this.props.reviews.map((r, i) => {
+          return <ReviewsDetail key={i} review={r} />;
         })}
       </ul>
     );
   }
 }
 
-export default ReviewsList;
+function mapStateToProps({ reviews }) {
+  return { reviews };
+}
+
+export default connect(mapStateToProps, actions.reviewsActions)(ReviewsList);

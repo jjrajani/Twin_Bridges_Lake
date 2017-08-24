@@ -1,20 +1,33 @@
 const mongoose = require('mongoose');
 const Review = mongoose.model('reviews');
+const User = mongoose.model('users');
 
 module.exports = app => {
   app.get('/api/reviews', (req, res) => {
-    Review.find({}, (err, reviews) => {
-      res.send({ reviews: reviews });
+    // Review.find({}, (err, reviews) => {
+    //   res.send(reviews);
+    // });
+
+    Review.find({}).sort({ createdAt: 'desc' }).exec(function(err, reviews) {
+      //do stuff with images
+      res.send(reviews);
     });
   });
 
   app.post('/api/reviews/new', async (req, res) => {
+    let user;
+    if (req.body.user !== 'guest') {
+      user = await User.find({ facebookId: req.body.user }, (err, user) => {
+        return user;
+      });
+    }
     const review = await new Review({
-      review: req.review,
-      rating: req.rating,
-      user: req.user || 'guest'
+      review: req.body.review,
+      rating: req.body.rating,
+      user: user[0].username || 'guest',
+      createdAt: new Date()
     }).save();
-    res.send({ review });
+    res.send(review);
   });
 
   app.delete('/api/reviews/:id', (req, res) => {

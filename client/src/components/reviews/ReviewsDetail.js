@@ -2,8 +2,16 @@ import React from 'react';
 
 const ReviewsDetail = ({ review }) => {
   return (
-    <div>
-      Reviews Detail {review.review}
+    <div key={review.id}>
+      <p>
+        {review.user}
+      </p>
+      <p>
+        {review.review}
+      </p>
+      <p>
+        {review.rating}
+      </p>
     </div>
   );
 };

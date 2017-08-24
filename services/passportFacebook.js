@@ -33,7 +33,10 @@ passport.use(
 
       if (user) return done(null, user);
 
-      user = await new User({ facebookId: profile.id }).save();
+      user = await new User({
+        facebookId: profile.id,
+        username: profile.displayName
+      }).save();
       done(null, user);
     }
   )
