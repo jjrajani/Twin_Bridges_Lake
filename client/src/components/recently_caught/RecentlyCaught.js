@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const RecentlyCaught = () => {
-  return <div>RecentlyCaught</div>;
-};
+class RecentlyCaught extends Component {
+  render() {
+    return <div>RecentlyCaught</div>;
+  }
+}
 
-export default RecentlyCaught;
+function mapStateToProps({ pics }) {
+  return { pics };
+}
+
+export default connect(mapStateToProps)(RecentlyCaught);

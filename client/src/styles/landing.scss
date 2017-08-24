@@ -1,9 +1,26 @@
 .landing {
   position: relative;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 80px);
   padding: 60px 0 0;
-  .header {
-    margin-bottom: 50px;
+  &:after {
+    content: "";
+    background-image: url('./landing.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: grayscale(20%);
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  a.link {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
   }
   .footer {
     width: 100%;
@@ -12,7 +29,8 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 0 36px;
+    padding: 0 30px;
     font-size: 0.85rem;
+    background-color: white;
   }
 }

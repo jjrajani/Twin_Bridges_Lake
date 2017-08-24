@@ -8,13 +8,20 @@ body {
 }
 
 * {
-  color: #222;
+  color: #111;
   letter-spacing: 0.035rem;
+  font-family: 'Raleway', sans-serif;
 }
 
 a {
   text-decoration: none;
   cursor: pointer;
+  &.link {
+    &:hover {
+      background-color: white;
+      opacity: 0.5;
+    }
+  }
 }
 
 .center {
@@ -29,3 +36,4 @@ a {
 @import 'header.scss';
 @import 'hamburger.scss';
 @import 'landing.scss';
+@import 'landing_title.scss';

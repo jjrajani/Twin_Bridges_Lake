@@ -1,9 +1,9 @@
 #header {
   .right {
-    height: 100px;
+    height: 80px;
     display: flex;
     justify-content: flex-end;
-    padding-right: 36px;
+    padding-right: 30px;
     ul {
       display: flex;
       align-items: center;
@@ -14,6 +14,9 @@
         list-style: none;
         a {
           color: #222;
+          &:hover {
+            opacity: 0.5;
+          }
         }
       }
     }
