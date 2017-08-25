@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReviewsDetail from './ReviewsDetail';
 import ReviewsNew from './ReviewsNew';
+import { Filter } from './components';
 import * as actions from '../../actions';
 
 class ReviewsList extends Component {
@@ -15,13 +16,15 @@ class ReviewsList extends Component {
       return <div>Loading...</div>;
     }
     return (
-      <div>
+      <div className="reviews_list">
+        <div className={`modal ${modalShowClass}`}>
+          <div className="modal-overlay" />
+          <ReviewsNew close={this.props.toggleModal} />
+        </div>
         <p className="new_review btn" onClick={() => this.props.toggleModal()}>
           Leave Review
         </p>
-        <div className={`modal ${modalShowClass}`}>
-          <ReviewsNew close={this.props.toggleModal} />
-        </div>
+        <Filter />
         <ul>
           {this.props.reviews.map((r, i) => {
             return <ReviewsDetail key={i} review={r} />;

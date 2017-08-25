@@ -14,3 +14,23 @@ export const deleteReview = id => async dispatch => {
 
   dispatch({ type: t.DELETE_REVIEW, payload: id });
 };
+
+export const filterReviews = filter => async dispatch => {
+  filter.persist();
+  const rating = filter.target.value;
+  let res = await axios.get('/api/reviews');
+  const filtered = res.data.filter(r => {
+    return r.rating.toString() === rating;
+  });
+  res =
+    filtered.length > 0
+      ? filtered
+      : [
+          {
+            rating,
+            review: 'Please select another rating.',
+            user: 'There are no reviews with this rating.'
+          }
+        ];
+  dispatch({ type: t.FILTER_REVIEWS, payload: res });
+};
