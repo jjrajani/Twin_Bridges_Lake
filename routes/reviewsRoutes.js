@@ -16,15 +16,18 @@ module.exports = app => {
 
   app.post('/api/reviews/new', async (req, res) => {
     let user;
+    console.log('req.body', req.body);
     if (req.body.user !== 'guest') {
       user = await User.find({ facebookId: req.body.user }, (err, user) => {
         return user;
       });
     }
+    console.log('USER', user);
+    user = user ? user[0].username : 'guest';
     const review = await new Review({
       review: req.body.review,
       rating: req.body.rating,
-      user: user[0].username || 'guest',
+      user: user,
       createdAt: new Date()
     }).save();
     res.send(review);

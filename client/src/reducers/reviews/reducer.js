@@ -5,8 +5,9 @@ export default function(state = [], action) {
     case t.FETCH_REVIEWS: {
       return action.payload;
     }
-    // case t.CREATE_REVIEW: {
-    // }
+    case t.CREATE_REVIEW: {
+      return [action.payload, ...state];
+    }
     case t.DELETE_REVIEW: {
       return state.filter(r => r._id !== action.payload);
     }

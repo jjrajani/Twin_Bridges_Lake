@@ -9,7 +9,8 @@ class ReviewsNew extends Component {
     this.state = {
       review: {
         rating: 0,
-        text: 'Leave your review...'
+        text: 'Leave your review...',
+        username: 'guest'
       }
     };
   }
@@ -17,7 +18,8 @@ class ReviewsNew extends Component {
     this.setState({
       review: {
         rating: rating,
-        text: this.state.review.text
+        text: this.state.review.text,
+        username: 'guest'
       }
     });
   }
@@ -25,18 +27,24 @@ class ReviewsNew extends Component {
     this.setState({
       review: {
         rating: this.state.review.rating,
-        text: e.target.value
+        text: e.target.value,
+        username: 'guest'
       }
     });
   }
+  submitReview(e) {
+    e.preventDefault();
+    this.props.createReview(this.state.review);
+  }
 
   render() {
+    console.log('reviews new', this.props);
     return (
       <div>
         <p onClick={() => this.props.close()}>
           <i className="fa fa-times" />
         </p>
-        <form>
+        <form onSubmit={this.submitReview.bind(this)}>
           <div className="input-row">
             <label>Rating</label>
             <RatingSelect selectRating={this.selectRating.bind(this)} />
@@ -49,10 +57,13 @@ class ReviewsNew extends Component {
               value={this.state.review.text}
             />
           </div>
+          <button type="submit">Submit Review</button>
         </form>
       </div>
     );
   }
 }
 
-export default connect(null, actions.reviewsActions)(ReviewsNew);
+export default connect(null, {
+  createReview: actions.reviewsActions.createReview
+})(ReviewsNew);

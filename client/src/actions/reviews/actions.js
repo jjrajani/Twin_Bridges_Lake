@@ -2,9 +2,10 @@ import axios from 'axios';
 import t from './types';
 
 export const createReview = review => async dispatch => {
-  const res = await axios.post('/api/reviews/new', review);
-
-  dispatch({ type: t.CREATE_REVIEW, payload: res.data });
+  console.log('creating Review', review);
+  const res = await axios.post('/api/reviews/new', { ...review });
+  console.log('Review created', res.data);
+  // dispatch({ type: t.CREATE_REVIEW, payload: res.data });
 };
 /*
   fetchUser uses ReduxThunk, a middleware that determines if action creator is returning a funciton.
