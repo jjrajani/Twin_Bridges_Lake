@@ -7,7 +7,8 @@ import {
   Header,
   Landing,
   RecentlyCaught,
-  ReviewsList
+  ReviewsList,
+  FishStock
   // ReviewsDetail
   // ReviewsNew
 } from './';
@@ -26,6 +27,7 @@ class App extends Component {
             <Route exact path="/" component={Landing} />
             <Route exact path="/reviews" component={ReviewsList} />
             <Route exact path="/recently_caught" component={RecentlyCaught} />
+            <Route exact path="/fish" component={FishStock} />
           </div>
         </BrowserRouter>
       </div>

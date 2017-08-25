@@ -4,6 +4,7 @@ import { Hamburger } from '../';
 
 class Header extends Component {
   render() {
+    console.log(this.props);
     return (
       <div id="header">
         <Hamburger />
