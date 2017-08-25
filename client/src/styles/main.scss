@@ -39,6 +39,11 @@ li {
 .col {
   flex-direction: column;
 }
+
+.hidden {
+  display: none;
+}
+
 @import 'header.scss';
 @import 'hamburger.scss';
 @import 'landing.scss';
@@ -46,3 +51,4 @@ li {
 @import 'review_stars.scss';
 @import 'review_detail.scss';
 @import 'review_delete.scss';
+@import 'rating_select.scss';

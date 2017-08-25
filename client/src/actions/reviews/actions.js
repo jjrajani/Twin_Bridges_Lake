@@ -11,7 +11,9 @@ export const createReview = review => async dispatch => {
   In so it is able to hold off calling dispatch until fetchUser says to.
  */
 export const fetchReviews = () => async dispatch => {
+  console.log('fetching');
   const res = await axios.get('/api/reviews');
+  console.log('fetching', res.data);
   dispatch({ type: t.FETCH_REVIEWS, payload: res.data });
 };
 
