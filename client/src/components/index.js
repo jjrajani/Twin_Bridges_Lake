@@ -9,6 +9,7 @@ import ReviewsNew from './reviews/ReviewsNew';
 import FishStock from './fish_stock/FishStock';
 import Admissions from './admissions/Admissions';
 import BaitList from './bait/BaitList';
+import OurStory from './our_story/OurStory';
 
 export {
   App,
@@ -21,5 +22,6 @@ export {
   ReviewsNew,
   FishStock,
   Admissions,
-  BaitList
+  BaitList,
+  OurStory
 };
