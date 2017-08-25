@@ -8,7 +8,8 @@ import {
   Landing,
   RecentlyCaught,
   ReviewsList,
-  FishStock
+  FishStock,
+  Admissions
   // ReviewsDetail
   // ReviewsNew
 } from './';
@@ -26,6 +27,7 @@ class App extends Component {
             {window.location.pathname !== '/' ? <Header /> : null}
             <Route exact path="/" component={Landing} />
             <Route exact path="/reviews" component={ReviewsList} />
+            <Route exact path="/admissions" component={Admissions} />
             <Route exact path="/recently_caught" component={RecentlyCaught} />
             <Route exact path="/fish" component={FishStock} />
           </div>

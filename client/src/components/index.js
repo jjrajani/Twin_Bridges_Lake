@@ -7,6 +7,7 @@ import ReviewsList from './reviews/ReviewsList';
 import ReviewsDetail from './reviews/ReviewsDetail';
 import ReviewsNew from './reviews/ReviewsNew';
 import FishStock from './fish_stock/FishStock';
+import Admissions from './admissions/Admissions';
 
 export {
   App,
@@ -17,5 +18,6 @@ export {
   ReviewsList,
   ReviewsDetail,
   ReviewsNew,
-  FishStock
+  FishStock,
+  Admissions
 };
