@@ -23,7 +23,7 @@ class App extends Component {
       <div className="wrapper">
         <BrowserRouter>
           <div>
-            <Header />
+            {window.location.pathname !== '/' ? <Header /> : null}
             <Route exact path="/" component={Landing} />
             <Route exact path="/reviews" component={ReviewsList} />
             <Route exact path="/recently_caught" component={RecentlyCaught} />

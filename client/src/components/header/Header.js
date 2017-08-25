@@ -4,15 +4,21 @@ import { Hamburger } from '../';
 
 class Header extends Component {
   render() {
-    console.log(this.props);
     return (
-      <div id="header">
+      <div id={`header`} className={`${this.props.styles}`}>
         <Hamburger />
         <div className="right">
+          {this.logo()}
           {this.renderLogin()}
         </div>
       </div>
     );
+  }
+
+  logo() {
+    return window.location.pathname === '/'
+      ? null
+      : <h1 className="logo">Twin Bridges Lake</h1>;
   }
 
   renderLogin() {
