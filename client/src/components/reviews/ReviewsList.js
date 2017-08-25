@@ -10,19 +10,16 @@ class ReviewsList extends Component {
   }
 
   render() {
+    const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
     if (this.props.reviews.length <= 0) {
       return <div>Loading...</div>;
     }
     return (
       <div>
         <p className="new_review btn" onClick={() => this.props.toggleModal()}>
-          Leave Your Review
+          Leave Review
         </p>
-        <div
-          className={`modal ${this.props.showReviewModal === true
-            ? ''
-            : 'hidden'}`}
-        >
+        <div className={`modal ${modalShowClass}`}>
           <ReviewsNew close={this.props.toggleModal} />
         </div>
         <ul>

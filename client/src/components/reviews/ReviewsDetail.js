@@ -1,6 +1,5 @@
 import React from 'react';
-import ReviewsDelete from './ReviewsDelete';
-import ReviewsStars from './ReviewsStars';
+import { ReviewsDelete, ReviewsStars } from './components';
 
 const ReviewsDetail = ({ review }) => {
   return (

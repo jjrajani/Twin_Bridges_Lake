@@ -13,6 +13,9 @@ class RatingSelect extends Component {
   handleMouseEnter(rating) {
     this.setState({ hoverRating: rating });
   }
+  handleMouseLeave() {
+    this.setState({ hoverRating: this.state.rating });
+  }
   handleClick(rating) {
     this.setState({ rating: rating });
     this.props.selectRating(rating);
@@ -26,12 +29,14 @@ class RatingSelect extends Component {
               key={i}
               rating={i}
               onMouseEnter={this.handleMouseEnter.bind(this, i)}
+              onMouseLeave={this.handleMouseLeave.bind(this)}
               onMouseClick={this.handleClick.bind(this, i)}
             />
           : <InactiveStar
               key={i}
               rating={i}
               onMouseEnter={this.handleMouseEnter.bind(this, i)}
+              onMouseLeave={this.handleMouseLeave.bind(this)}
               onMouseClick={this.handleClick.bind(this, i)}
             />
       );
