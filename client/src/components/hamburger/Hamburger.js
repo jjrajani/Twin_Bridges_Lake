@@ -22,6 +22,9 @@ export default class Hamburger extends Component {
           <a id="reviews" className="menu-item" href="/reviews">
             Reviews
           </a>
+          <a id="bait" className="menu-item" href="/bait">
+            Bait
+          </a>
           <a id="admissions" className="menu-item" href="/admissions">
             Admissions
           </a>
