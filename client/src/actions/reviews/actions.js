@@ -12,12 +12,11 @@ export const createReview = review => async dispatch => {
  */
 export const fetchReviews = () => async dispatch => {
   const res = await axios.get('/api/reviews');
-  console.log('fetching', res.data);
   dispatch({ type: t.FETCH_REVIEWS, payload: res.data });
 };
 
 export const deleteReview = id => async dispatch => {
-  const res = await axios.delete(`/api/reviews/${id}`);
+  await axios.delete(`/api/reviews/${id}`);
 
-  dispatch({ type: t.DELETE_REVIEW, payload: res.data });
+  dispatch({ type: t.DELETE_REVIEW, payload: id });
 };

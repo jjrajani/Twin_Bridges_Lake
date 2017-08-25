@@ -1,0 +1,11 @@
+.reviews_delete {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  i {
+    cursor: pointer;
+    &:hover {
+      color: red;
+    }
+  }
+}

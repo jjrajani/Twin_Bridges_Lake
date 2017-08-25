@@ -7,8 +7,9 @@ export default function(state = [], action) {
     }
     // case t.CREATE_REVIEW: {
     // }
-    // case t.DELETE_REVIEW: {
-    // }
+    case t.DELETE_REVIEW: {
+      return state.filter(r => r._id !== action.payload);
+    }
     default:
       return state;
   }

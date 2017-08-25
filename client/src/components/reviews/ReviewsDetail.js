@@ -1,17 +1,22 @@
 import React from 'react';
+import ReviewsDelete from './ReviewsDelete';
+import ReviewsStars from './ReviewsStars';
 
 const ReviewsDetail = ({ review }) => {
   return (
-    <div key={review.id}>
-      <p>
-        {review.user}
-      </p>
-      <p>
-        {review.review}
-      </p>
-      <p>
-        {review.rating}
-      </p>
+    <div key={review.id} className="reviews_detail">
+      <ReviewsDelete review={review} />
+      <div className="top">
+        <p>
+          {review.user}
+        </p>
+        <ReviewsStars stars={review.rating} />
+      </div>
+      <div className="btm">
+        <p>
+          {review.review}
+        </p>
+      </div>
     </div>
   );
 };
