@@ -4,30 +4,16 @@ const User = mongoose.model('users');
 
 module.exports = app => {
   app.get('/api/reviews', (req, res) => {
-    // Review.find({}, (err, reviews) => {
-    //   res.send(reviews);
-    // });
-
     Review.find({}).sort({ createdAt: 'desc' }).exec(function(err, reviews) {
-      //do stuff with images
       res.send(reviews);
     });
   });
 
   app.post('/api/reviews/new', async (req, res) => {
-    let user;
-    console.log('req.body', req.body);
-    if (req.body.user !== 'guest') {
-      user = await User.find({ facebookId: req.body.user }, (err, user) => {
-        return user;
-      });
-    }
-    console.log('USER', user);
-    user = user ? user[0].username : 'guest';
     const review = await new Review({
-      review: req.body.review,
+      review: req.body.text,
       rating: req.body.rating,
-      user: user,
+      user: req.body.username,
       createdAt: new Date()
     }).save();
     res.send(review);

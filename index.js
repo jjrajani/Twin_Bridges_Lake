@@ -26,7 +26,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(bodyParser.json());
 /* Auth Services */
 // require('./services/passportGoogle');
 require('./services/passportFacebook');

@@ -4,37 +4,9 @@ import * as actions from '../../actions';
 import { RatingSelect } from './components';
 
 class ReviewsNew extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      review: {
-        rating: 0,
-        text: 'Leave your review...',
-        username: 'guest'
-      }
-    };
-  }
-  selectRating(rating) {
-    this.setState({
-      review: {
-        rating: rating,
-        text: this.state.review.text,
-        username: 'guest'
-      }
-    });
-  }
-  handleChange(e) {
-    this.setState({
-      review: {
-        rating: this.state.review.rating,
-        text: e.target.value,
-        username: 'guest'
-      }
-    });
-  }
   submitReview(e) {
     e.preventDefault();
-    this.props.createReview(this.state.review);
+    this.props.createReview(this.props.review, this.props.auth);
   }
 
   render() {
@@ -47,14 +19,15 @@ class ReviewsNew extends Component {
         <form onSubmit={this.submitReview.bind(this)}>
           <div className="input-row">
             <label>Rating</label>
-            <RatingSelect selectRating={this.selectRating.bind(this)} />
+            <RatingSelect selectRating={this.props.selectRating.bind(this)} />
           </div>
           <div className="input-row">
             <label>Review</label>
             <textarea
-              onChange={this.handleChange.bind(this)}
+              onChange={this.props.updateReview.bind(this)}
               type="text"
-              value={this.state.review.text}
+              name="text"
+              value={this.props.review.text}
             />
           </div>
           <button type="submit">Submit Review</button>
@@ -64,6 +37,15 @@ class ReviewsNew extends Component {
   }
 }
 
-export default connect(null, {
-  createReview: actions.reviewsActions.createReview
+function mapStateToProps({ currentReview, auth }) {
+  return {
+    review: currentReview,
+    auth
+  };
+}
+
+export default connect(mapStateToProps, {
+  createReview: actions.reviewsActions.createReview,
+  updateReview: actions.reviewActions.updateReview,
+  selectRating: actions.reviewActions.selectRating
 })(ReviewsNew);
