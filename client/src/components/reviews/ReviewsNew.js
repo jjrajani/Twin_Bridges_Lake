@@ -14,7 +14,12 @@ class ReviewsNew extends Component {
     };
   }
   selectRating(rating) {
-    console.log('selecting rating', rating);
+    this.setState({
+      review: {
+        rating: rating,
+        text: this.state.review.text
+      }
+    });
   }
   handleChange(e) {
     this.setState({
@@ -34,7 +39,7 @@ class ReviewsNew extends Component {
         <form>
           <div className="input-row">
             <label>Rating</label>
-            <RatingSelect selectRating={this.selectRating} />
+            <RatingSelect selectRating={this.selectRating.bind(this)} />
           </div>
           <div className="input-row">
             <label>Review</label>

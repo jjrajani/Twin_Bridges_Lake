@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReviewsDelete, ReviewsStars } from './components';
+import { ReviewsDelete, ReviewsRating } from './components';
 
 const ReviewsDetail = ({ review }) => {
   return (
@@ -9,7 +9,7 @@ const ReviewsDetail = ({ review }) => {
         <p>
           {review.user}
         </p>
-        <ReviewsStars stars={review.rating} />
+        <ReviewsRating stars={review.rating} />
       </div>
       <div className="btm">
         <p>

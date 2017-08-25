@@ -1,5 +1,5 @@
 import RatingSelect from './rating_select/RatingSelect';
 import ReviewsDelete from './ReviewsDelete';
-import ReviewsStars from './ReviewsStars';
+import ReviewsRating from './ReviewsRating';
 
-export { RatingSelect, ReviewsDelete, ReviewsStars };
+export { RatingSelect, ReviewsDelete, ReviewsRating };
