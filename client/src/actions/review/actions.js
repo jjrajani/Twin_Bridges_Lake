@@ -1,10 +1,14 @@
 import axios from 'axios';
 import t from './types';
 
-export const fetchReview = id => async dispatch => {
-  const res = await axios.get(`/api/reviews/${id}`);
-
-  dispatch({ type: t.FETCH_REVIEW, payload: res.data });
+export const createReview = (review, auth) => async dispatch => {
+  if (auth !== false) review.username = auth.username;
+  const res = await axios.post('/api/reviews/new', {
+    text: review.text,
+    username: review.username,
+    rating: review.rating
+  });
+  dispatch({ type: t.CREATE_REVIEW, payload: res.data });
 };
 
 export const updateReview = event => dispatch => {
@@ -14,9 +18,8 @@ export const updateReview = event => dispatch => {
   });
 };
 
-export const selectRating = rating => dispatch => {
+export const resetReview = () => dispatch => {
   dispatch({
-    type: t.SELECT_RATING,
-    payload: rating
+    type: t.RESET_REVIEW
   });
 };

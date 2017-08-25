@@ -7,10 +7,11 @@ class ReviewsNew extends Component {
   submitReview(e) {
     e.preventDefault();
     this.props.createReview(this.props.review, this.props.auth);
+    this.props.resetReview();
+    this.props.resetStars();
   }
 
   render() {
-    console.log('reviews new', this.props);
     return (
       <div>
         <p onClick={() => this.props.close()}>
@@ -19,7 +20,10 @@ class ReviewsNew extends Component {
         <form onSubmit={this.submitReview.bind(this)}>
           <div className="input-row">
             <label>Rating</label>
-            <RatingSelect selectRating={this.props.selectRating.bind(this)} />
+            <RatingSelect
+              review={this.props.review}
+              selectRating={this.props.selectRating.bind(this)}
+            />
           </div>
           <div className="input-row">
             <label>Review</label>
@@ -45,7 +49,7 @@ function mapStateToProps({ currentReview, auth }) {
 }
 
 export default connect(mapStateToProps, {
-  createReview: actions.reviewsActions.createReview,
-  updateReview: actions.reviewActions.updateReview,
-  selectRating: actions.reviewActions.selectRating
+  ...actions.reviewActions,
+  ...actions.reviewsActions,
+  ...actions.selectStarsActions
 })(ReviewsNew);

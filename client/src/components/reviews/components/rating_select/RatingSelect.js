@@ -1,43 +1,28 @@
 import React, { Component } from 'react';
+import * as actions from '../../../../actions';
+import { connect } from 'react-redux';
 import ActiveStar from './ActiveStar';
 import InactiveStar from './InactiveStar';
 
 class RatingSelect extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hoverRating: 0,
-      rating: 0
-    };
-  }
-  handleMouseEnter(rating) {
-    this.setState({ hoverRating: rating });
-  }
-  handleMouseLeave() {
-    this.setState({ hoverRating: this.state.rating });
-  }
-  handleClick(rating) {
-    this.setState({ rating: rating });
-    this.props.selectRating(rating);
-  }
   renderStars() {
     let HTML = [];
     for (let i = 1; i <= 5; i++) {
       HTML.push(
-        this.state.hoverRating >= i || this.state.rating >= i
+        this.props.hoverRating >= i || this.props.rating >= i
           ? <ActiveStar
               key={i}
               rating={i}
-              onMouseEnter={this.handleMouseEnter.bind(this, i)}
-              onMouseLeave={this.handleMouseLeave.bind(this)}
-              onMouseClick={this.handleClick.bind(this, i)}
+              onMouseEnter={this.props.onMouseEnter.bind(this, i)}
+              onMouseLeave={this.props.onMouseLeave.bind(this, i)}
+              onMouseClick={this.props.selectRating.bind(this, i)}
             />
           : <InactiveStar
               key={i}
               rating={i}
-              onMouseEnter={this.handleMouseEnter.bind(this, i)}
-              onMouseLeave={this.handleMouseLeave.bind(this)}
-              onMouseClick={this.handleClick.bind(this, i)}
+              onMouseEnter={this.props.onMouseEnter.bind(this, i)}
+              onMouseLeave={this.props.onMouseLeave.bind(this, i)}
+              onMouseClick={this.props.selectRating.bind(this, i)}
             />
       );
     }
@@ -53,4 +38,14 @@ class RatingSelect extends Component {
   }
 }
 
-export default RatingSelect;
+function mapStateToProps({ selectStars }) {
+  return {
+    ...selectStars
+  };
+}
+
+export default connect(mapStateToProps, {
+  onMouseEnter: actions.selectStarsActions.onMouseEnter,
+  onMouseLeave: actions.selectStarsActions.onMouseLeave,
+  selectRating: actions.selectStarsActions.selectRating
+})(RatingSelect);

@@ -5,16 +5,16 @@ export default function(
   action
 ) {
   switch (action.type) {
-    // case t.CREATE_REVIEW: {
-    //
-    // }
     case t.UPDATE_REVIEW: {
-      var newState = Object.assign({}, state);
+      let newState = Object.assign({}, state);
       newState[action.payload.name] = action.payload.value;
       return newState;
     }
+    case t.RESET_REVIEW: {
+      return { text: '', username: 'guest', rating: 0 };
+    }
     case t.SELECT_RATING: {
-      var newState = Object.assign({}, state);
+      let newState = Object.assign({}, state);
       newState.rating = action.payload;
       return newState;
     }
