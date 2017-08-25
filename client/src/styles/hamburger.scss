@@ -29,7 +29,9 @@
   .bm-cross {
     background: #bdc3c7;
   }
-
+  .bm-menu-wrap {
+    z-index: 1000 !important;
+  }
   /* General sidebar styles */
   .bm-menu {
     background: #373a47;
