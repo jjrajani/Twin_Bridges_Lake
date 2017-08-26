@@ -2,45 +2,51 @@ import React from 'react';
 
 const LiveBait = () => {
   return (
-    <div>
-      <h3>Live Bait</h3>
-      <ul>
-        <li>
-          <label>Worms: $4.50</label>
-          <ul>
-            <li>
-              <p>Night Crawlers</p>
-            </li>
-            <li>
-              <p>Red Wigglers</p>
-            </li>
-          </ul>
+    <div className="sub_content">
+      <h3 className="sub_header">Live Bait</h3>
+      <ul className="list">
+        <label>Worms</label>
+        <li className="list-item">
+          <p>
+            <span className="left">Night Crawlers</span>
+            <span className="right">$4.5</span>
+          </p>
         </li>
-        <li>
-          <label>Minnows</label>
-          <ul>
-            <li>
-              <p>Half Dozen</p>
-              <p>$3</p>
-            </li>
-            <li>
-              <p>Dozen</p>
-              <p>$6</p>
-            </li>
-          </ul>
+        <li className="list-item">
+          <p>
+            <span className="left">Red Wigglers</span>
+            <span className="right">$4.5</span>
+          </p>
         </li>
-        <li>
-          <label>Crickets</label>
-          <ul>
-            <li>
-              <p>Half Tube</p>
-              <p>$3</p>
-            </li>
-            <li>
-              <p>Full Tube</p>
-              <p>$5</p>
-            </li>
-          </ul>
+      </ul>
+      <ul className="list">
+        <label>Minnows</label>
+        <li className="list-item">
+          <p>
+            <span className="left">Half Dozen</span>
+            <span className="right">$3</span>
+          </p>
+        </li>
+        <li className="list-item">
+          <p>
+            <span className="left">Dozen</span>
+            <span className="right">$6</span>
+          </p>
+        </li>
+      </ul>
+      <ul className="list">
+        <label>Crickets</label>
+        <li className="list-item">
+          <p>
+            <span className="left">Half Tube</span>
+            <span className="right">$3</span>
+          </p>
+        </li>
+        <li className="list-item">
+          <p>
+            <span className="left">Full Tube</span>
+            <span className="right">$5</span>
+          </p>
         </li>
       </ul>
     </div>

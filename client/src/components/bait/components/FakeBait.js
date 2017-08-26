@@ -2,17 +2,26 @@ import React from 'react';
 
 const FakeBait = () => {
   return (
-    <div>
-      <h3>Fake Bait</h3>
-      <ul>
-        <li>
-          <p>Stink Bait (for the catfish)</p>
+    <div className="sub_content">
+      <h3 className="sub_header">Fake Bait</h3>
+      <ul className="list">
+        <li className="list-item">
+          <p>
+            <span className="left">Stink Bait</span>
+            <span className="right">(for the catfish)</span>
+          </p>
         </li>
-        <li>
-          <p>Rubber Lures (for the bass)</p>
+        <li className="list-item">
+          <p>
+            <span className="left">Rubber Lures</span>
+            <span className="right">(for the bass)</span>
+          </p>
         </li>
-        <li>
-          <p>Corn (for the carp)</p>
+        <li className="list-item">
+          <p>
+            <span className="left">Corn</span>
+            <span className="right">(for the carp)</span>
+          </p>
         </li>
       </ul>
     </div>

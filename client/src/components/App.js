@@ -12,9 +12,16 @@ import {
   Admissions,
   BaitList,
   OurStory
-  // ReviewsDetail
-  // ReviewsNew
 } from './';
+
+const Footer = () => {
+  return (
+    <div className="footer">
+      <h4>1119 Braselton Hwy, Lawrenceville Ga, 30043</h4>
+      <h4>(770) 963-6739</h4>
+    </div>
+  );
+};
 
 class App extends Component {
   componentDidMount() {
@@ -22,8 +29,10 @@ class App extends Component {
   }
 
   render() {
+    const wrapperClass =
+      window.location.pathname === '/' ? 'wrapper_landing' : 'wrapper';
     return (
-      <div className="wrapper">
+      <div className={wrapperClass}>
         <BrowserRouter>
           <div>
             {window.location.pathname !== '/' ? <Header /> : null}
@@ -36,6 +45,7 @@ class App extends Component {
             <Route exact path="/fish" component={FishStock} />
           </div>
         </BrowserRouter>
+        {window.location.pathname !== '/' ? <Footer /> : null}
       </div>
     );
   }

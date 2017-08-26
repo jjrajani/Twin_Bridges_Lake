@@ -2,20 +2,26 @@ import React from 'react';
 
 const Bait = () => {
   return (
-    <div>
-      <h3>Bait</h3>
-      <ul>
-        <li>
-          <p>Chicken Liver</p>
-          <p>$4.50</p>
+    <div className="sub_content">
+      <h3 className="sub_header">Bait</h3>
+      <ul className="list">
+        <li className="list-item">
+          <p>
+            <span className="left">Chicken Liver</span>
+            <span className="right">$4.50</span>
+          </p>
         </li>
-        <li>
-          <p>Rooster Liver</p>
-          <p>$5.00</p>
+        <li className="list-item">
+          <p>
+            <span className="left">Rooster Liver</span>
+            <span className="right">$5.00</span>
+          </p>
         </li>
-        <li>
-          <p>Frozen Shrimp</p>
-          <p>$4.00</p>
+        <li className="list-item">
+          <p>
+            <span className="left">Frozen Shrimp</span>
+            <span className="right">$4.00</span>
+          </p>
         </li>
       </ul>
     </div>

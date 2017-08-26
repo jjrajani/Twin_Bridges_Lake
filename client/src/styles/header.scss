@@ -1,6 +1,11 @@
+@mixin header-color() {
+  color: #ddd;
+  opacity: .8;
+}
 #header {
   // display: flex;
   border: solid black 1px;
+  background-color: transparentize(blue, .2);
   .right {
     height: 80px;
     display: flex;
@@ -9,6 +14,10 @@
     padding-right: 30px;
     h1 {
       margin-right: 30.3333%;
+      @include header-color();
+    }
+    .login_btn {
+      @include header-color();
     }
     ul {
       display: flex;

@@ -31,7 +31,9 @@ class Header extends Component {
     return (
       <ul>
         <li>
-          <a href="/auth/facebook">Login</a>
+          <a className="login_btn" href="/auth/facebook">
+            Login
+          </a>
         </li>
       </ul>
     );
@@ -41,7 +43,9 @@ class Header extends Component {
     return (
       <ul>
         <li>
-          <a href="/api/logout">Logout</a>
+          <a className="login_btn" href="/api/logout">
+            Logout
+          </a>
         </li>
       </ul>
     );

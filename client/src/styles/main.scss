@@ -28,6 +28,7 @@ ul,
 li {
   padding: 0;
   margin: 0;
+  list-style: none;
 }
 
 .center {
@@ -57,3 +58,4 @@ li {
 @import 'reviews_list.scss';
 @import 'form.scss';
 @import 'filter.scss';
+@import 'layout.scss';

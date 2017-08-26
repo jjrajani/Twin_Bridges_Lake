@@ -1,0 +1,79 @@
+.wrapper {
+  padding-bottom: 60px;
+}
+.wrapper,
+.wrapper_landing {
+  min-height: 100vh;
+  position: relative;
+  .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 30px;
+    font-size: 0.85rem;
+    background-color: white;
+    border: solid black 1px;
+    @media screen and (max-width: 535px) {
+      font-size: 0.65rem;
+    }
+  }
+}
+.content {
+  .sub_header,
+  .sub_content .sub_header {
+    text-align: center;
+    color: #333;
+    &:first-child {
+      margin: 50px 0 20px;
+    }
+  }
+  .list {
+    padding: 40px 20% 50px;
+    &:last-child {
+      margin-bottom: 30px;
+    }
+    background-color: blue;
+    opacity: .5;
+    .list-item,
+    .list-item p,
+    .list-item p span,
+    label {
+      padding: 8px 0;
+      display: flex;
+      color: white;
+      font-size: 1.3rem;
+    }
+    .list-item p {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+      margin: 0;
+      .left {
+        font-size: 1.1rem;
+      }
+      .right {
+        font-size: 0.75rem;
+      }
+    }
+    label {
+      border-bottom: solid #ddd 1px;
+      letter-spacing: 0.25rem;
+    }
+  }
+  .text {
+    line-height: 1.8rem;
+    text-align: justify;
+    padding: 0 5% 30px;
+    .warning {
+      color: red;
+    }
+    .monster_cats {
+      color: blue;
+      font-weight: 600;
+    }
+  }
+}
