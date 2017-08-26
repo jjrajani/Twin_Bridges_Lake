@@ -6,7 +6,7 @@ import * as actions from '../actions';
 import {
   Header,
   Landing,
-  RecentlyCaught,
+  Gallery,
   ReviewsList,
   FishStock,
   Admissions,
@@ -41,7 +41,7 @@ class App extends Component {
             <Route exact path="/reviews" component={ReviewsList} />
             <Route exact path="/bait" component={BaitList} />
             <Route exact path="/admissions" component={Admissions} />
-            <Route exact path="/recently_caught" component={RecentlyCaught} />
+            <Route exact path="/gallery" component={Gallery} />
             <Route exact path="/fish" component={FishStock} />
           </div>
         </BrowserRouter>

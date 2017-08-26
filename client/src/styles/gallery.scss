@@ -1,0 +1,35 @@
+.gallery {
+  .image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: solid #aaa 1px;
+    border-radius: 4px;
+    width: 90%;
+    margin: 60px auto;
+    padding: 40px 2.5% 0;
+    .image-item {
+      max-width: 30%;
+      min-width: 200px;
+      margin: 50px 8px;
+      &:first-child {
+      }
+      img {
+        max-width: 100%;
+        max-height: calc(width);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 764px) {
+  .image-item {
+    max-width: 40% !important;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .image-item {
+    max-width: 85% !important;
+  }
+}

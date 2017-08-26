@@ -2,7 +2,7 @@ import App from './App';
 import Header from './header/Header';
 import Landing from './landing/Landing';
 import Hamburger from './hamburger/Hamburger';
-import RecentlyCaught from './recently_caught/RecentlyCaught';
+import Gallery from './gallery/Gallery';
 import ReviewsList from './reviews/ReviewsList';
 import ReviewsDetail from './reviews/ReviewsDetail';
 import ReviewsNew from './reviews/ReviewsNew';
@@ -16,7 +16,7 @@ export {
   Header,
   Landing,
   Hamburger,
-  RecentlyCaught,
+  Gallery,
   ReviewsList,
   ReviewsDetail,
   ReviewsNew,

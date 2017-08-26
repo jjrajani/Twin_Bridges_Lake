@@ -16,8 +16,8 @@ export default class Hamburger extends Component {
           <a id="stock" className="menu-item" href="/fish">
             The Fish We Stock
           </a>
-          <a id="catches" className="menu-item" href="/recently_caught">
-            Recently Caught
+          <a id="catches" className="menu-item" href="/gallery">
+            Gallery
           </a>
           <a id="reviews" className="menu-item" href="/reviews">
             Reviews
