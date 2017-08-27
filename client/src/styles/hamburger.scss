@@ -1,7 +1,7 @@
 .hamburger {
   /* Position and sizing of burger button */
   .bm-burger-button {
-    position: fixed;
+    position: absolute;
     width: 25px;
     height: 22px;
     left: 30px;
@@ -37,6 +37,8 @@
     background: #373a47;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
+    margin-left: -1px;
+    margin-top: -1px;
   }
 
   /* Morph shape necessary with bubble or elastic */

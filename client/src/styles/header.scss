@@ -3,57 +3,48 @@
   opacity: .8;
 }
 #header {
-  // display: flex;
   border: solid black 1px;
-  // background-color: transparentize(blue, .2);
-  .right {
-    height: 80px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 30px;
-    h1 {
-      margin-right: 30.3333%;
-      @include header-color();
+  height: 80px;
+  .logo {
+    width: 100%;
+    text-align: center;
+  }
+  .login_btn {
+    position: absolute;
+    width: 25px;
+    height: 22px;
+    right: 50px;
+    top: 30px;
+  }
+  h1,
+  .login_btn {
+    @include header-color();
+  }
+  a {
+    color: #222;
+    &.menu-item {
+      color: white;
     }
-    .login_btn {
-      @include header-color();
-    }
-    ul {
-      display: flex;
-      align-items: center;
-      li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        list-style: none;
-        a {
-          color: #222;
-          &:hover {
-            opacity: 0.5;
-          }
-        }
-      }
+    &:hover {
+      opacity: 0.5;
     }
   }
 }
 @media screen and (max-width: 620px) {
   #header {
     height: 120px;
-    .right {
-      flex-direction: column;
-      align-items: flex-end;
-      margin: 0;
-    }
-    h1 {
-      margin-right: 0 !important;
+    .logo {
+      text-align: right;
+      padding: 0 27px 0 0;
     }
     &.landing_header {
       height: 80px;
-      .right {
-        flex-direction: row;
-        align-items: center;
+      .login_btn {
+        top: 30px;
       }
+    }
+    .login_btn {
+      top: 70px;
     }
   }
 }

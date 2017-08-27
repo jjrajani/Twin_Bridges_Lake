@@ -7,10 +7,8 @@ class Header extends Component {
     return (
       <div id={`header`} className={`${this.props.styles}`}>
         <Hamburger />
-        <div className="right">
-          {this.logo()}
-          {this.renderLogin()}
-        </div>
+        {this.logo()}
+        {this.renderLogin()}
       </div>
     );
   }
@@ -29,13 +27,9 @@ class Header extends Component {
 
   renderLoginButtons() {
     return (
-      <ul>
-        <li>
-          <a className="login_btn" href="/auth/facebook">
-            Login
-          </a>
-        </li>
-      </ul>
+      <a className="login_btn" href="/auth/facebook">
+        Login
+      </a>
     );
   }
 
