@@ -17,7 +17,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className={`footer`}>
       <h4>1119 Braselton Hwy, Lawrenceville Ga, 30043</h4>
       <h4>(770) 963-6739</h4>
     </div>
@@ -32,8 +32,9 @@ class App extends Component {
   render() {
     const wrapperClass =
       window.location.pathname === '/' ? 'wrapper_landing' : 'wrapper';
+    const scrollClass = this.props.showGalleryModal === true ? 'no_scroll' : '';
     return (
-      <div className={wrapperClass}>
+      <div className={`${wrapperClass} ${scrollClass}`}>
         <BrowserRouter>
           <div>
             {window.location.pathname !== '/' ? <Header /> : null}
@@ -47,10 +48,17 @@ class App extends Component {
             <Route exact path="/fish" component={FishStock} />
           </div>
         </BrowserRouter>
-        {window.location.pathname !== '/' ? <Footer /> : null}
+        {window.location.pathname !== '/' &&
+        this.props.showGalleryModal === false
+          ? <Footer />
+          : null}
       </div>
     );
   }
 }
 
-export default connect(null, actions.authActions)(App);
+function mapStateToProps({ showGalleryModal }) {
+  return { showGalleryModal };
+}
+
+export default connect(mapStateToProps, actions.authActions)(App);

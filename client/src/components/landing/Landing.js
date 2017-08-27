@@ -15,8 +15,8 @@ class Landing extends Component {
         <div className="landing">
           <Title />
           <div className="center col">
-            <a className="link" href="/recently_caught">
-              <h3>Recently Caught</h3>
+            <a className="link" href="/gallery">
+              <h3>Gallery</h3>
             </a>
             <a className="link" href="/location">
               <h3>Location</h3>

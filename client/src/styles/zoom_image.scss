@@ -1,0 +1,39 @@
+.zoom_image {
+  border: solid black 3px;
+  position: absolute;
+  top: 81px;
+  left: 0;
+  right: 0;
+  height: calc(100vh - 81px);
+  .overlay {
+    background-color: #000;
+    opacity: 0.9;
+    height: 100%;
+  }
+  .close {
+    i {
+      right: 30px;
+      top: 25px;
+      font-size: 2rem;
+      position: absolute;
+      z-index: 200;
+      color: #888;
+      &:hover {
+        color: lighten(#888, 30%);
+        cursor: pointer;
+      }
+    }
+  }
+  .image {
+    position: absolute;
+    top: 80px;
+    width: 90%;
+    left: 5%;
+    z-index: 100;
+    img {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: auto;
+    }
+  }
+}

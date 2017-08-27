@@ -45,6 +45,12 @@ li {
   display: none;
 }
 
+.no_scroll {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
 @import 'header.scss';
 @import 'hamburger.scss';
 @import 'landing.scss';
@@ -60,3 +66,4 @@ li {
 @import 'filter.scss';
 @import 'layout.scss';
 @import 'gallery.scss';
+@import 'zoom_image.scss';

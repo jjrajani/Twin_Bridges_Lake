@@ -1,6 +1,5 @@
 // https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=29224b1aa64ce41ffc9966ef92598e22&per_page=10&format=json&nojsoncallback=1
 
-import PICTURES from './pictures';
 import t from '../../actions/pics/types';
 
 export default function(state = [], action) {
