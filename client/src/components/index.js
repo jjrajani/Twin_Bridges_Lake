@@ -10,6 +10,7 @@ import FishStock from './fish_stock/FishStock';
 import Admissions from './admissions/Admissions';
 import BaitList from './bait/BaitList';
 import OurStory from './our_story/OurStory';
+import Location from './location/Location';
 
 export {
   App,
@@ -23,5 +24,6 @@ export {
   FishStock,
   Admissions,
   BaitList,
-  OurStory
+  OurStory,
+  Location
 };

@@ -9,14 +9,15 @@
     margin: 60px auto;
     padding: 40px 2.5% 0;
     .image-item {
-      max-width: 30%;
+      width: 25vw;
       min-width: 200px;
+      height: 25vw;
       margin: 50px 8px;
+      overflow: hidden;
       &:first-child {
       }
       img {
-        max-width: 100%;
-        max-height: calc(width);
+        width: 100%;
       }
     }
   }

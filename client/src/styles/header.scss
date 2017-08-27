@@ -1,11 +1,11 @@
 @mixin header-color() {
-  color: #ddd;
+  color: #777;
   opacity: .8;
 }
 #header {
   // display: flex;
   border: solid black 1px;
-  background-color: transparentize(blue, .2);
+  // background-color: transparentize(blue, .2);
   .right {
     height: 80px;
     display: flex;

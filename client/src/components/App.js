@@ -11,7 +11,8 @@ import {
   FishStock,
   Admissions,
   BaitList,
-  OurStory
+  OurStory,
+  Location
 } from './';
 
 const Footer = () => {
@@ -38,6 +39,7 @@ class App extends Component {
             {window.location.pathname !== '/' ? <Header /> : null}
             <Route exact path="/" component={Landing} />
             <Route exact path="/story" component={OurStory} />
+            <Route exact path="/location" component={Location} />
             <Route exact path="/reviews" component={ReviewsList} />
             <Route exact path="/bait" component={BaitList} />
             <Route exact path="/admissions" component={Admissions} />
