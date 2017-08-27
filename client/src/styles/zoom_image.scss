@@ -1,14 +1,25 @@
 .zoom_image {
-  border: solid black 3px;
   position: absolute;
+  min-width: 100%;
+  min-height: 100%;
   top: 81px;
-  left: 0;
-  right: 0;
-  height: calc(100vh - 81px);
+  @media screen and (max-width: 620px) {
+    top: 120px;
+  }
   .overlay {
     background-color: #000;
     opacity: 0.9;
-    height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    z-index: 100;
+  }
+  .modal_container {
+    position: absolute;
+    height: calc(100vh - 150px);
+    width: 100%;
+    z-index: 101;
+    overflow: scroll;
   }
   .close {
     i {
@@ -16,7 +27,6 @@
       top: 25px;
       font-size: 2rem;
       position: absolute;
-      z-index: 200;
       color: #888;
       &:hover {
         color: lighten(#888, 30%);
@@ -25,15 +35,13 @@
     }
   }
   .image {
-    position: absolute;
-    top: 80px;
-    width: 90%;
-    left: 5%;
-    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0;
     img {
-      width: 100%;
-      background-repeat: no-repeat;
-      background-size: auto;
+      width: 80%;
+      max-width: 800px;
     }
   }
 }

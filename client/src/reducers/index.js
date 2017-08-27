@@ -4,6 +4,7 @@ import reviewsReducer from './reviews/reducer';
 import reviewReducer from './review/reducer';
 import reviewModalReducer from './review_modal/reducer';
 import galleryModalReducer from './gallery_modal/reducer';
+import galleryReducer from './gallery/reducer';
 import selectStarsReducer from './selectStars/reducer';
 import picsReducer from './pics/reducer';
 
@@ -13,6 +14,7 @@ export default combineReducers({
   currentReview: reviewReducer,
   showReviewModal: reviewModalReducer,
   showGalleryModal: galleryModalReducer,
+  gallery: galleryReducer,
   selectStars: selectStarsReducer,
   pics: picsReducer
 });

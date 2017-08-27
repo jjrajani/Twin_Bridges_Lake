@@ -1,4 +1,4 @@
-import t from '../../actions/review_modal/types';
+import t from '../../actions/gallery_modal/types';
 
 export default function(state = false, action) {
   switch (action.type) {
