@@ -1,7 +1,29 @@
-.location_map > div {
-  max-width: 70%;
-  width: 70%;
-  margin: 80px 15%;
-  max-height: 60vh;
-  border: solid pink 10px;
+.location {
+  .location_map {
+    height: 75vh;
+  }
+  .location_map > div {
+    max-width: 70%;
+    width: 70%;
+    margin: 80px 15%;
+    max-height: 60vh;
+  }
+  .get_directions {
+    width: 100vw;
+    text-align: center;
+    padding: 2vh;
+    border: solid #333 1px;
+    background-color: blue;
+    opacity: .6;
+    cursor: pointer;
+    &:hover {
+      opacity: .7;
+    }
+    .button {
+      color: white;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.08rem;
+    }
+  }
 }
