@@ -1,6 +1,6 @@
 .landing {
   position: relative;
-  height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
   padding: 60px 0 0;
   &:after {
     content: "";
@@ -8,7 +8,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    filter: grayscale(20%);
+    filter: grayscale(35%);
     opacity: 0.5;
     top: 0;
     left: 0;
@@ -21,5 +21,65 @@
     width: 100%;
     text-align: center;
     margin: 10px 0;
+  }
+  .title {
+    position: relative;
+    padding: 0 30px;
+    .overlay {
+      background-color: white;
+      opacity: 0.5;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+    h1 {
+      color: black;
+      font-size: 3rem;
+      letter-spacing: 0.3rem;
+      margin-bottom: 0;
+      z-index: 2;
+    }
+    h2 {
+      margin: 20px 0 40px;
+      color: black;
+      opacity: .8;
+      letter-spacing: 0.1rem;
+      font-size: 2rem;
+      z-index: 2;
+    }
+  }
+  .center {
+    .link {
+      h3 {
+        color: #111;
+        font-size: 1.6rem;
+        letter-spacing: 0.2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 593px) {
+  .landing {
+    .title {
+      h2 {
+        text-align: right !important;
+        margin-left: auto;
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .landing {
+    .title {
+      h1 {
+        text-align: left !important;
+      }
+      h2 {
+      }
+    }
   }
 }
