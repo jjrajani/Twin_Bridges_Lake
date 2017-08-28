@@ -37,6 +37,7 @@ require('./routes/authFacebookRoutes')(app);
 require('./routes/currentUserRoutes')(app);
 require('./routes/reviewsRoutes')(app);
 require('./routes/galleryRoutes')(app);
+require('./routes/directionsRoutes')(app);
 
 app.get('/', (req, res) => {
   res.send('Hello There');
