@@ -4,7 +4,11 @@
   color: white;
 }
 #header {
-  // border: solid black 1px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  border: solid black 1px;
   height: 80px;
   background-color: #ccc;
   .logo {

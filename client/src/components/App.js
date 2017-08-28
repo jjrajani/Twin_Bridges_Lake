@@ -3,6 +3,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
+import Hamburger from './hamburger/Hamburger';
+
 import {
   Header,
   Landing,
@@ -38,14 +40,17 @@ class App extends Component {
         <BrowserRouter>
           <div>
             {window.location.pathname !== '/' ? <Header /> : null}
-            <Route exact path="/" component={Landing} />
-            <Route exact path="/story" component={OurStory} />
-            <Route exact path="/location" component={Location} />
-            <Route exact path="/reviews" component={ReviewsList} />
-            <Route exact path="/bait" component={BaitList} />
-            <Route exact path="/admissions" component={Admissions} />
-            <Route exact path="/gallery" component={Gallery} />
-            <Route exact path="/fish" component={FishStock} />
+            <Hamburger />
+            <div className="main-content">
+              <Route exact path="/" component={Landing} />
+              <Route exact path="/story" component={OurStory} />
+              <Route exact path="/location" component={Location} />
+              <Route exact path="/reviews" component={ReviewsList} />
+              <Route exact path="/bait" component={BaitList} />
+              <Route exact path="/admissions" component={Admissions} />
+              <Route exact path="/gallery" component={Gallery} />
+              <Route exact path="/fish" component={FishStock} />
+            </div>
           </div>
         </BrowserRouter>
         {window.location.pathname !== '/' &&
