@@ -8,15 +8,17 @@ class Header extends Component {
       <div id={`header`} className={`${this.props.styles}`}>
         <Hamburger />
         {this.logo()}
-        {this.renderLogin()}
       </div>
     );
   }
+  // {this.renderLogin()}
 
   logo() {
-    return window.location.pathname === '/'
-      ? null
-      : <h1 className="logo">Twin Bridges Lake</h1>;
+    // return window.location.pathname === '/'
+    //   ? null
+    //   : <h1 className="logo">Twin Bridges Lake</h1>;
+
+    return <h1 className="logo">Twin Bridges Lake</h1>;
   }
 
   renderLogin() {
@@ -47,7 +49,8 @@ class Header extends Component {
 }
 
 function mapStateToProps({ auth }) {
-  return { auth };
+  // return { auth };
+  return null;
 }
 
 export default connect(mapStateToProps)(Header);

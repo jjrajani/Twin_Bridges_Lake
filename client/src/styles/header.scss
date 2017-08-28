@@ -7,7 +7,9 @@
   height: 80px;
   .logo {
     width: 100%;
-    text-align: center;
+    // text-align: center; /* with Login Button */
+    text-align: right; /* with Login Button */
+    padding: 0 30px 0 0; /* with Login Button */
   }
   .login_btn {
     position: absolute;
