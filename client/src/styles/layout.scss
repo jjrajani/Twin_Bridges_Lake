@@ -6,18 +6,32 @@
   min-height: 100vh;
   position: relative;
   .footer {
+    background-color: #aaa;
+    opacity: .7;
     width: 100%;
     position: absolute;
     bottom: 0;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     padding: 0 30px;
-    font-size: 0.85rem;
-    background-color: white;
     border: solid black 1px;
-    @media screen and (max-width: 535px) {
-      font-size: 0.65rem;
+    height: 50px;
+    h4 {
+      font-size: 1rem;
+      color: white;
+      margin: 0;
+      letter-spacing: 0.08rem;
+    }
+  }
+  @media screen and (max-width: 593px) {
+    .footer {
+      justify-content: center;
+      h4 {
+        &:first-child {
+          display: none;
+        }
+      }
     }
   }
 }
