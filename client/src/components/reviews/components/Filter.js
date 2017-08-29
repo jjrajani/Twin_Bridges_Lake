@@ -3,7 +3,6 @@ import * as actions from '../../../actions';
 import { connect } from 'react-redux';
 
 const Filter = ({ filterReviews }) => {
-  console.log(filterReviews);
   return (
     <div className="filter">
       <form>

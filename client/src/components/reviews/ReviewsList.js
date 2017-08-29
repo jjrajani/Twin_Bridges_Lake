@@ -16,16 +16,21 @@ class ReviewsList extends Component {
       return <div>Loading...</div>;
     }
     return (
-      <div className="reviews_list">
+      <div className="reviews">
         <div className={`modal ${modalShowClass}`}>
           <div className="modal-overlay" />
           <ReviewsNew close={this.props.toggleModal} />
         </div>
-        <p className="new_review btn" onClick={() => this.props.toggleModal()}>
-          Leave Review
-        </p>
-        <Filter />
-        <ul>
+        <div className="buttons">
+          <p
+            className="leave_review btn"
+            onClick={() => this.props.toggleModal()}
+          >
+            Leave Review
+          </p>
+          <Filter />
+        </div>
+        <ul className="reviews_list">
           {this.props.reviews.map((r, i) => {
             return <ReviewsDetail key={i} review={r} />;
           })}
