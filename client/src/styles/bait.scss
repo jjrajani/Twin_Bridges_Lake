@@ -1,0 +1,32 @@
+.bait {
+  .live_bait_sub_header {
+  }
+  .live_bait_sub_header_fixed {
+    .sub_header {
+      position: fixed;
+      top: 80px;
+      width: 100%;
+      background-color: white !important;
+    }
+    .list.first {
+      padding-top: 116px;
+    }
+  }
+  .bait_sub_header {
+  }
+  .bait_sub_header_fixed {
+    .sub_header {
+      position: fixed;
+      top: 154px;
+      width: 100%;
+      background-color: white !important;
+    }
+    .list.first {
+      padding-top: 116px;
+    }
+  }
+  .fake_bait_sub_header {
+  }
+  .fake_bait_sub_header_fixed {
+  }
+}

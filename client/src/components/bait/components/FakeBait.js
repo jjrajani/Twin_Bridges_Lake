@@ -1,10 +1,12 @@
 import React from 'react';
 
-const FakeBait = () => {
+const FakeBait = ({ styleClass, zIndex }) => {
   return (
-    <div className="sub_content">
-      <h3 className="sub_header">Fake Bait</h3>
-      <ul className="list">
+    <div className={`sub_content ${styleClass}`}>
+      <h3 className="sub_header" style={{ zIndex }}>
+        Fake Bait
+      </h3>
+      <ul className="list first">
         <li className="list-item">
           <p>
             <span className="left">Stink Bait</span>

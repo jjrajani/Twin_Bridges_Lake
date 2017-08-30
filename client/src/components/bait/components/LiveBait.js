@@ -1,10 +1,12 @@
 import React from 'react';
 
-const LiveBait = () => {
+const LiveBait = ({ styleClass, zIndex }) => {
   return (
-    <div className="sub_content">
-      <h3 className="sub_header">Live Bait</h3>
-      <ul className="list">
+    <div id="live_bait" className={`sub_content ${styleClass}`}>
+      <h3 className="sub_header" style={{ zIndex }}>
+        Live Bait
+      </h3>
+      <ul className="list first">
         <label>Worms</label>
         <li className="list-item">
           <p>
