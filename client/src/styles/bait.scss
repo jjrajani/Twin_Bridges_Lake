@@ -6,6 +6,7 @@
       position: fixed;
       top: 80px;
       width: 100%;
+      max-width: 1100px;
       background-color: white !important;
     }
     .list.first {
@@ -16,8 +17,9 @@
   }
   .bait_sub_header_fixed {
     .sub_header {
+      max-width: 1100px;
       position: fixed;
-      top: 154px;
+      top: 153px;
       width: 100%;
       background-color: white !important;
     }
@@ -28,5 +30,12 @@
   .fake_bait_sub_header {
   }
   .fake_bait_sub_header_fixed {
+    .sub_header {
+      max-width: 1100px;
+      position: fixed;
+      top: 226px;
+      width: 100%;
+      background-color: white !important;
+    }
   }
 }

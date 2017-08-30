@@ -17,21 +17,16 @@ class BaitList extends Component {
   }
   handleScroll() {
     let fixedHeader = 0;
-    window.scrollY > 1516
+    window.scrollY > 1175
       ? (fixedHeader = 3)
-      : window.scrollY > 1043
+      : window.scrollY > 842
         ? (fixedHeader = 2)
-        : window.scrollY > 201 ? (fixedHeader = 1) : (fixedHeader = 0);
+        : window.scrollY >= 0 ? (fixedHeader = 1) : (fixedHeader = 0);
     this.setState({ fixedHeader });
   }
   render() {
     return (
       <div className="bait content">
-        <h2 className="sub_header">Bait</h2>
-        <p className="text">
-          We have all the bait in the world everything is here no matter what
-          you need we have it long time
-        </p>
         <LiveBait
           zIndex={30}
           styleClass={
