@@ -2,6 +2,8 @@ import axios from 'axios';
 import t from './types';
 
 export const createReview = (review, auth) => async dispatch => {
+  console.log('AUTH', auth);
+  console.log('review', review);
   if (auth !== false) review.username = auth.username;
   const res = await axios.post('/api/reviews/new', {
     text: review.text,

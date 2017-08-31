@@ -22,6 +22,7 @@ class ReviewsNew extends Component {
             <label>Rating</label>
             <RatingSelect selectRating={this.props.selectRating.bind(this)} />
           </div>
+          {this.renderNameOfReviewer()}
           <div className="input-row">
             <label>Review</label>
             <textarea
@@ -35,6 +36,29 @@ class ReviewsNew extends Component {
         </form>
       </div>
     );
+  }
+  renderNameOfReviewer() {
+    if (!this.props.auth) {
+      return (
+        <div className="input-row">
+          <label>Name</label>
+          <input
+            onChange={this.props.updateReview.bind(this)}
+            type="text"
+            name="username"
+            value={this.props.review.username}
+          />
+        </div>
+      );
+    } else {
+      return (
+        <div className="input-row">
+          <label>
+            {this.props.auth.username}
+          </label>
+        </div>
+      );
+    }
   }
 }
 

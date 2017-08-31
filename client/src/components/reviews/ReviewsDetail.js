@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReviewsDelete, ReviewsRating } from './components';
+import { ReviewsDelete, ReviewsRating, DateString } from './components';
 
 const ReviewsDetail = ({ review }) => {
   return (
@@ -15,6 +15,7 @@ const ReviewsDetail = ({ review }) => {
         <p>
           {review.review}
         </p>
+        {DateString(review.createdAt)}
       </div>
     </div>
   );
