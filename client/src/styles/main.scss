@@ -46,9 +46,9 @@ li {
 }
 
 .no_scroll {
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
+  // overflow: hidden;
+  // height: 100vh;
+  // width: 100vw;
 }
 
 @import 'header.scss';
@@ -61,6 +61,7 @@ li {
 @import 'rating_select.scss';
 @import 'reviews_new.scss';
 @import 'modal.scss';
+@import 'reviews.scss';
 @import 'reviews_list.scss';
 @import 'form.scss';
 @import 'filter.scss';

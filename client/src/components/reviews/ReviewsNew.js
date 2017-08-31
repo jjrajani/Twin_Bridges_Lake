@@ -14,25 +14,30 @@ class ReviewsNew extends Component {
   render() {
     return (
       <div className="reviews_new">
-        <p onClick={() => this.props.close()}>
+        <p className="close_btn" onClick={() => this.props.close()}>
           <i className="fa fa-times" />
         </p>
         <form onSubmit={this.submitReview.bind(this)}>
-          <div className="input-row">
+          <div className="input-row rating">
             <label>Rating</label>
             <RatingSelect selectRating={this.props.selectRating.bind(this)} />
           </div>
           {this.renderNameOfReviewer()}
           <div className="input-row">
-            <label>Review</label>
+            <label htmlFor="text" className="textarea">
+              Review
+            </label>
             <textarea
               onChange={this.props.updateReview.bind(this)}
               type="text"
               name="text"
+              id="text"
               value={this.props.review.text}
             />
           </div>
-          <button type="submit">Submit Review</button>
+          <div className="input-row">
+            <button type="submit">Submit Review</button>
+          </div>
         </form>
       </div>
     );
@@ -41,11 +46,12 @@ class ReviewsNew extends Component {
     if (!this.props.auth) {
       return (
         <div className="input-row">
-          <label>Name</label>
+          <label htmlFor="username">Name</label>
           <input
             onChange={this.props.updateReview.bind(this)}
             type="text"
             name="username"
+            id="username"
             value={this.props.review.username}
           />
         </div>

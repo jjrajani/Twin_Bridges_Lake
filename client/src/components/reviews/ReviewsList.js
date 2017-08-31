@@ -19,11 +19,16 @@ class ReviewsList extends Component {
   }
   loadingScreen() {
     const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
+    const scrollClass = this.props.showReviewModal === true ? 'no_scroll' : '';
     return (
-      <div className="reviews">
+      <div className={`reviews ${scrollClass}`}>
         <div className={`modal ${modalShowClass}`}>
           <div className="modal-overlay" />
-          <ReviewsNew close={this.props.toggleModal} />
+          <div className="modal_content_wrapper">
+            <div className="modal_content">
+              <ReviewsNew close={this.props.toggleModal} />
+            </div>
+          </div>
         </div>
         <div className="buttons">
           <p
@@ -39,11 +44,16 @@ class ReviewsList extends Component {
 
   renderList() {
     const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
+    const scrollClass = this.props.showReviewModal === true ? 'no_scroll' : '';
     return (
-      <div className="reviews">
+      <div className={`reviews ${scrollClass}`}>
         <div className={`modal ${modalShowClass}`}>
           <div className="modal-overlay" />
-          <ReviewsNew close={this.props.toggleModal} />
+          <div className="modal_content_wrapper">
+            <div className="modal_content">
+              <ReviewsNew close={this.props.toggleModal} />
+            </div>
+          </div>
         </div>
         <div className="buttons">
           <p
