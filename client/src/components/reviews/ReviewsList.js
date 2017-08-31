@@ -11,10 +11,35 @@ class ReviewsList extends Component {
   }
 
   render() {
-    const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
     if (this.props.reviews.length <= 0) {
       return <div>Loading...</div>;
+      return this.loadingScreen();
+    } else {
+      return this.renderList();
     }
+  }
+  loadingScreen() {
+    const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
+    return (
+      <div className="reviews">
+        <div className={`modal ${modalShowClass}`}>
+          <div className="modal-overlay" />
+          <ReviewsNew close={this.props.toggleModal} />
+        </div>
+        <div className="buttons">
+          <p
+            className="leave_review btn"
+            onClick={() => this.props.toggleModal()}
+          >
+            Leave Review
+          </p>
+        </div>
+      </div>
+    );
+  }
+
+  renderList() {
+    const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
     return (
       <div className="reviews">
         <div className={`modal ${modalShowClass}`}>
