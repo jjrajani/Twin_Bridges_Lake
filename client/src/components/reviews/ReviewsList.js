@@ -12,7 +12,6 @@ class ReviewsList extends Component {
 
   render() {
     if (this.props.reviews.length <= 0) {
-      return <div>Loading...</div>;
       return this.loadingScreen();
     } else {
       return this.renderList();
