@@ -1,8 +1,8 @@
 .zoom_image {
-  position: absolute;
+  position: fixed;
   min-width: 100%;
-  min-height: 100%;
-  top: 81px;
+  height: 100vh;
+  top: 80px;
   @media screen and (max-width: 620px) {
     top: 120px;
   }

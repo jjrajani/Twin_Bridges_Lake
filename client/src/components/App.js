@@ -14,7 +14,7 @@ import {
   Admissions,
   BaitList,
   OurStory,
-  Location
+  Directions
 } from './';
 
 const Footer = () => {
@@ -37,26 +37,21 @@ class App extends Component {
     const scrollClass = this.props.showGalleryModal === true ? 'no_scroll' : '';
     return (
       <div className={`${wrapperClass} ${scrollClass}`}>
+        {window.location.pathname !== '/' ? <Header /> : null}
+        <Hamburger />
         <BrowserRouter>
-          <div>
-            {window.location.pathname !== '/' ? <Header /> : null}
-            <Hamburger />
-            <div className="main-content">
-              <Route exact path="/" component={Landing} />
-              <Route exact path="/story" component={OurStory} />
-              <Route exact path="/location" component={Location} />
-              <Route exact path="/reviews" component={ReviewsList} />
-              <Route exact path="/bait" component={BaitList} />
-              <Route exact path="/admissions" component={Admissions} />
-              <Route exact path="/gallery" component={Gallery} />
-              <Route exact path="/fish" component={FishStock} />
-            </div>
+          <div className="main-content">
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/story" component={OurStory} />
+            <Route exact path="/directions" component={Directions} />
+            <Route exact path="/reviews" component={ReviewsList} />
+            <Route exact path="/bait" component={BaitList} />
+            <Route exact path="/admissions" component={Admissions} />
+            <Route exact path="/gallery" component={Gallery} />
+            <Route exact path="/fish" component={FishStock} />
           </div>
         </BrowserRouter>
-        {window.location.pathname !== '/' &&
-        this.props.showGalleryModal === false
-          ? <Footer />
-          : null}
+        <Footer />
       </div>
     );
   }

@@ -25,10 +25,6 @@ class Landing extends Component {
               <h3>Admissions</h3>
             </a>
           </div>
-          <div className="footer">
-            <h4>1119 Braselton Hwy, Lawrenceville Ga, 30043</h4>
-            <h4>(770) 963-6739</h4>
-          </div>
         </div>
       </div>
     );

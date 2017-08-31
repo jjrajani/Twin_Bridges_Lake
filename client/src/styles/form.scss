@@ -11,6 +11,7 @@ form {
       margin: 0 10px 0 0;
       opacity: 0.8;
       width: 10%;
+      cursor: pointer;
       &.textarea {
         display: flex;
         align-items: flex-start;
@@ -55,6 +56,9 @@ form {
       background-color: #333;
       color: white;
     }
+  }
+  select {
+    cursor: pointer;
   }
 }
 @media screen and (max-width: 720px) {

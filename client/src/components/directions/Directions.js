@@ -6,7 +6,7 @@ https://github.com/tomchentw/react-google-maps
 
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
-export class Location extends Component {
+export class Directions extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,7 +34,7 @@ export class Location extends Component {
   render() {
     console.log(this.props);
     return (
-      <div className="location">
+      <div className="directions content">
         <div className="location_map">
           <Map
             google={this.props.google}
@@ -88,4 +88,4 @@ export class Location extends Component {
 
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyCexFsxDoQltJZDyF__z2ayYEKteqw2bJY'
-})(Location);
+})(Directions);
