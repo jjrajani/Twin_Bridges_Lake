@@ -8,7 +8,7 @@ const DateString = date => {
     dayNum = DateFormatter.getDay(date),
     year = DateFormatter.getFullYear(date);
   return (
-    <p>
+    <p className="date_string">
       Date Posted: {dayString} {month}, {dayNum} {year}
     </p>
   );

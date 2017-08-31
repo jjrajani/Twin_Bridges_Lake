@@ -2,7 +2,10 @@
   display: flex;
   .star {
     i.fa-star {
-      color: navy;
+      color: turquoise;
+    }
+    i {
+      font-size: 1.6rem;
     }
   }
 }
