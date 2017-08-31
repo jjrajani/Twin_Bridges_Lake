@@ -4,21 +4,39 @@ import * as actions from '../../actions';
 import { RatingSelect } from './components';
 
 class ReviewsNew extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { inValid: false };
+  }
+  componentDidUpdate() {
+    if (this.props.review.rating > 0 && this.state.inValid === true) {
+      this.setState({ inValid: false });
+    }
+  }
   submitReview(e) {
     e.preventDefault();
-    this.props.createReview(this.props.review, this.props.auth);
-    this.props.resetReview();
-    this.props.resetStars();
+    if (this.isValid()) {
+      this.props.createReview(this.props.review, this.props.auth);
+      this.props.resetReview();
+      this.props.resetStars();
+    } else {
+      this.setState({ inValid: true });
+    }
+  }
+
+  isValid() {
+    return this.props.review.rating > 0;
   }
 
   render() {
+    const inValidClass = this.state.inValid ? 'invalid' : '';
     return (
-      <div className="reviews_new">
+      <div className={`reviews_new ${inValidClass}`}>
         <p className="close_btn" onClick={() => this.props.close()}>
           <i className="fa fa-times" />
         </p>
         <form onSubmit={this.submitReview.bind(this)}>
-          <div className="input-row rating">
+          <div className={`input-row rating`}>
             <label>Rating</label>
             <RatingSelect selectRating={this.props.selectRating.bind(this)} />
           </div>
@@ -32,6 +50,7 @@ class ReviewsNew extends Component {
               type="text"
               name="text"
               id="text"
+              required
               value={this.props.review.text}
             />
           </div>
@@ -43,6 +62,8 @@ class ReviewsNew extends Component {
     );
   }
   renderNameOfReviewer() {
+    const value =
+      this.props.review.username === 'guest' ? '' : this.props.review.username;
     if (!this.props.auth) {
       return (
         <div className="input-row">
@@ -52,7 +73,9 @@ class ReviewsNew extends Component {
             type="text"
             name="username"
             id="username"
-            value={this.props.review.username}
+            required
+            placeholder="guest"
+            value={value}
           />
         </div>
       );

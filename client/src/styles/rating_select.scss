@@ -2,6 +2,9 @@
   i {
     font-size: 1.5rem;
     padding: 0 3px;
+    &.invalid {
+      color: red;
+    }
     &.fa-star-o:hover {
       color: red;
     }

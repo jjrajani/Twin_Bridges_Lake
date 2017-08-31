@@ -25,4 +25,17 @@
     // width: auto;
     // margin: 0 0 0 auto;
   }
+  .invalid_message {
+    display: none;
+  }
+}
+.reviews_new.invalid {
+  .rating_select {
+    i {
+      color: red;
+    }
+  }
+  .invalid_message {
+    display: block;
+  }
 }

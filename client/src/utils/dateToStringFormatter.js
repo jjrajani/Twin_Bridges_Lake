@@ -30,11 +30,9 @@ const DAYS = {
   6: { long: 'Sunday', short: 'Sun' }
 };
 export function longStringDay(dateNum) {
-  console.log(dateNum);
   return DAYS[dateNum].long;
 }
 
 export function shortStringDay(dateNum) {
-  console.log(dateNum);
   return DAYS[dateNum].short;
 }

@@ -32,6 +32,7 @@ class RatingSelect extends Component {
   render() {
     return (
       <div className="rating_select">
+        <p className="invalid_message">Please select a rating</p>
         {this.renderStars()}
       </div>
     );
