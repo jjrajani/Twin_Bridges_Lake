@@ -1,6 +1,7 @@
 .reviews {
   border-top: none;
   position: relative;
+  margin-top: -30px;
   &.no_scroll {
     // margin-top: 80px;
     max-height: calc(100vh - 80px);

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const OurStory = () => {
+const Layout = () => {
   return (
     <div className="main-content">
       <div className="content">
@@ -22,4 +22,4 @@ const OurStory = () => {
   );
 };
 
-export default OurStory;
+export default Layout;

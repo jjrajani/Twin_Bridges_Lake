@@ -17,6 +17,8 @@ import {
   Directions
 } from './';
 
+import Layout from './Layout';
+
 const Footer = () => {
   return (
     <div className={`footer`}>
@@ -40,8 +42,9 @@ class App extends Component {
         {window.location.pathname !== '/' ? <Header /> : null}
         <Hamburger />
         <BrowserRouter>
-          <div className="main-content">
+          <div className="main-content-wrapper">
             <Route exact path="/" component={Landing} />
+            <Route exact path="/layout" component={Layout} />
             <Route exact path="/story" component={OurStory} />
             <Route exact path="/directions" component={Directions} />
             <Route exact path="/reviews" component={ReviewsList} />

@@ -26,31 +26,33 @@ class BaitList extends Component {
   }
   render() {
     return (
-      <div className="bait content">
-        <LiveBait
-          zIndex={30}
-          styleClass={
-            this.state.fixedHeader >= 1
-              ? 'live_bait_sub_header_fixed'
-              : 'live_bait_sub_header'
-          }
-        />
-        <Bait
-          zIndex={31}
-          styleClass={
-            this.state.fixedHeader >= 2
-              ? 'bait_sub_header_fixed'
-              : 'bait_sub_header'
-          }
-        />
-        <FakeBait
-          zIndex={32}
-          styleClass={
-            this.state.fixedHeader >= 3
-              ? 'fake_bait_sub_header_fixed'
-              : 'fake_bait_sub_header'
-          }
-        />
+      <div className="main-content">
+        <div className="bait content">
+          <LiveBait
+            zIndex={30}
+            styleClass={
+              this.state.fixedHeader >= 1
+                ? 'live_bait_sub_header_fixed'
+                : 'live_bait_sub_header'
+            }
+          />
+          <Bait
+            zIndex={31}
+            styleClass={
+              this.state.fixedHeader >= 2
+                ? 'bait_sub_header_fixed'
+                : 'bait_sub_header'
+            }
+          />
+          <FakeBait
+            zIndex={32}
+            styleClass={
+              this.state.fixedHeader >= 3
+                ? 'fake_bait_sub_header_fixed'
+                : 'fake_bait_sub_header'
+            }
+          />
+        </div>
       </div>
     );
   }
