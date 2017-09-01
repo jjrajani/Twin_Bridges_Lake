@@ -1,6 +1,4 @@
 import React from 'react';
-import * as actions from '../../../actions';
-import { connect } from 'react-redux';
 
 const Modal = ({ show, children }) => {
   const modalShowClass = show === true ? '' : 'hidden';

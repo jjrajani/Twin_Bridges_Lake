@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../../actions';
 import LocationMap from './components/LocationMap.js';
 import GetDirections from './components/GetDirections.js';
 
