@@ -21,7 +21,7 @@ class ReviewsList extends Component {
     const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
     const scrollClass = this.props.showReviewModal === true ? 'no_scroll' : '';
     return (
-      <div className={`reviews ${scrollClass}`}>
+      <div className={`main-content reviews ${scrollClass}`}>
         <div className={`modal ${modalShowClass}`}>
           <div className="modal-overlay" />
           <div className="modal_content_wrapper">
@@ -46,7 +46,7 @@ class ReviewsList extends Component {
     const modalShowClass = this.props.showReviewModal === true ? '' : 'hidden';
     const scrollClass = this.props.showReviewModal === true ? 'no_scroll' : '';
     return (
-      <div className={`reviews ${scrollClass}`}>
+      <div className={`main-content reviews ${scrollClass}`}>
         <div className={`modal ${modalShowClass}`}>
           <div className="modal-overlay" />
           <div className="modal_content_wrapper">
@@ -64,11 +64,13 @@ class ReviewsList extends Component {
           </p>
           <Filter />
         </div>
-        <ul className="reviews_list">
-          {this.props.reviews.map((r, i) => {
-            return <ReviewsDetail key={i} review={r} />;
-          })}
-        </ul>
+        <div className="content">
+          <ul className="reviews_list">
+            {this.props.reviews.map((r, i) => {
+              return <ReviewsDetail key={i} review={r} />;
+            })}
+          </ul>
+        </div>
       </div>
     );
   }

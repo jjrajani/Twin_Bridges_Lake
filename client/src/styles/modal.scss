@@ -1,6 +1,6 @@
 .modal {
   min-height: calc(100vh - 80px);
-  width: 100vw;
+  width: 100%;
   position: relative;
   z-index: 200;
   overflow: scroll;
@@ -12,6 +12,7 @@
   background-color: #ccc;
   opacity: 0.7;
   position: fixed;
+  left: 0;
 }
 .modal_content_wrapper {
   position: absolute;

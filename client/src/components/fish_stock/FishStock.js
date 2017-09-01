@@ -2,17 +2,19 @@ import React from 'react';
 
 const FishStock = () => {
   return (
-    <div className="main-content">
+    <div className="main-content fish_stock">
       <div className="content">
-        <h3 className="sub_header">Fish in the Lake</h3>
-        <ul className="list">
-          <li className="list-item">Bluehead Catfish</li>
-          <li className="list-item">Channel Catfish</li>
-          <li className="list-item">Large Mouth Bass</li>
-          <li className="list-item">Bream</li>
-          <li className="list-item">Crappie</li>
-          <li className="list-item">Carp</li>
-        </ul>
+        <h2 className="sub_header">Fish in the Lake</h2>
+        <div className="sub_content">
+          <ul className="list">
+            <li className="list-item">Bluehead Catfish</li>
+            <li className="list-item">Channel Catfish</li>
+            <li className="list-item">Large Mouth Bass</li>
+            <li className="list-item">Bream</li>
+            <li className="list-item">Crappie</li>
+            <li className="list-item">Carp</li>
+          </ul>
+        </div>
 
         <div className="sub_content">
           <p className="text">
