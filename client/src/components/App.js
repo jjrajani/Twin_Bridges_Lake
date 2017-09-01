@@ -14,19 +14,11 @@ import {
   Admissions,
   BaitList,
   OurStory,
-  Location
+  Location,
+  Footer
 } from './';
 
 import Layout from './Layout';
-
-const Footer = () => {
-  return (
-    <div className={`footer`}>
-      <h4>1119 Braselton Hwy, Lawrenceville Ga, 30043</h4>
-      <h4>(770) 963-6739</h4>
-    </div>
-  );
-};
 
 class App extends Component {
   componentDidMount() {
@@ -34,11 +26,8 @@ class App extends Component {
   }
 
   render() {
-    const wrapperClass =
-      window.location.pathname === '/' ? 'wrapper_landing' : 'wrapper';
-    const scrollClass = this.props.showGalleryModal === true ? 'no_scroll' : '';
     return (
-      <div className={`${wrapperClass} ${scrollClass}`}>
+      <div className="wrapper">
         <Header />
         <Hamburger />
         <BrowserRouter>

@@ -10,6 +10,7 @@ import BaitList from './bait/BaitList';
 import OurStory from './our_story/OurStory';
 import Location from './location/Location';
 import Login from './login/Login';
+import Footer from './footer/Footer';
 
 export {
   App,
@@ -23,5 +24,6 @@ export {
   BaitList,
   OurStory,
   Location,
-  Login
+  Login,
+  Footer
 };
