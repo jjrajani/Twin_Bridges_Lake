@@ -4,8 +4,8 @@
     min-height: calc((100vh - 220px) * .7);
     width: 80%;
     margin: 0 auto;
-    padding: 40px 0 0;
-    > div {
+    padding-top: 40px;
+    > div > div {
       border: solid 1px #777;
     }
   }
