@@ -14,7 +14,7 @@ import {
   Admissions,
   BaitList,
   OurStory,
-  Directions
+  Location
 } from './';
 
 import Layout from './Layout';
@@ -39,14 +39,14 @@ class App extends Component {
     const scrollClass = this.props.showGalleryModal === true ? 'no_scroll' : '';
     return (
       <div className={`${wrapperClass} ${scrollClass}`}>
-        {window.location.pathname !== '/' ? <Header /> : null}
+        <Header />
         <Hamburger />
         <BrowserRouter>
           <div className="main-content-wrapper">
             <Route exact path="/" component={Landing} />
             <Route exact path="/layout" component={Layout} />
             <Route exact path="/story" component={OurStory} />
-            <Route exact path="/directions" component={Directions} />
+            <Route exact path="/location" component={Location} />
             <Route exact path="/reviews" component={ReviewsList} />
             <Route exact path="/bait" component={BaitList} />
             <Route exact path="/admissions" component={Admissions} />
