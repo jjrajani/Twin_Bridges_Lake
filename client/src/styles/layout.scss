@@ -1,15 +1,13 @@
 .wrapper {
-  // padding-bottom: 60px;
-  // .wrapper_landing {
-  //   min-height: 100vh;
-  //   position: relative;
-  // }
   .main-content-wrapper {
     margin-top: 80px;
     min-height: calc(100vh - 130px);
     .main-content {
       max-width: 1100px;
       margin: 0 auto;
+      @media screen and (min-width: 1101px) {
+        border: solid transparent 1px;
+      }
       .content {
         .sub_header,
         .sub_content .sub_header {
@@ -19,41 +17,15 @@
             margin: 50px 0 20px;
           }
         }
-        .list {
-          padding: 40px 20% 50px;
-          border-left: solid #777 1px;
-          border-right: solid #777 1px;
-          background-color: lighten(blue, 30%);
-          &:last-child {
-            margin-bottom: 16px;
-            border-bottom: solid #777 1px;
-          }
-          .list-item,
-          .list-item p,
-          .list-item p span,
-          label {
-            padding: 8px 0;
-            display: flex;
-            color: white;
-            font-size: 1.3rem;
-          }
-          .list-item p {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            width: 100%;
-            margin: 0;
-            .left {
-              font-size: 1.1rem;
-            }
-            .right {
-              font-size: 0.75rem;
-            }
-          }
-          label {
-            border-bottom: solid #ddd 1px;
-            letter-spacing: 0.25rem;
-          }
+        &.has_fixed_sub_header {
+          padding-top: 74px;
+        }
+        .fixed.sub_header {
+          position: fixed;
+          top: 80px;
+          left: 0;
+          width: 100%;
+          background-color: white;
         }
         .text {
           line-height: 1.8rem;
@@ -72,32 +44,7 @@
     }
   }
 }
-.footer {
-  background-color: #aaa;
-  opacity: .7;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 30px;
-  border: solid black 1px;
-  height: 50px;
-  h4 {
-    font-size: 1rem;
-    color: white;
-    margin: 0;
-    letter-spacing: 0.08rem;
-  }
-}
-@media screen and (max-width: 593px) {
-  .footer {
-    justify-content: center;
-    h4 {
-      &:first-child {
-        display: none;
-      }
-    }
-  }
-}
+
 h3.sub_header {
   border: solid #777 1px;
   padding: 25px 0;

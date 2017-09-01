@@ -1,61 +1,112 @@
-import React, { Component } from 'react';
-import { LiveBait, Bait, FakeBait } from './components';
+import React from 'react';
 
-class BaitList extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fixedHeader: 0
-    };
-    this.handleScroll = this.handleScroll.bind(this);
-  }
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-  componentWillUnMount() {
-    window.removeEventListener('scroll');
-  }
-  handleScroll() {
-    let fixedHeader = 0;
-    window.scrollY > 1175
-      ? (fixedHeader = 3)
-      : window.scrollY > 842
-        ? (fixedHeader = 2)
-        : window.scrollY >= 0 ? (fixedHeader = 1) : (fixedHeader = 0);
-    this.setState({ fixedHeader });
-  }
-  render() {
-    return (
-      <div className="main-content">
-        <div className="bait content">
-          <LiveBait
-            zIndex={30}
-            styleClass={
-              this.state.fixedHeader >= 1
-                ? 'live_bait_sub_header_fixed'
-                : 'live_bait_sub_header'
-            }
-          />
-          <Bait
-            zIndex={31}
-            styleClass={
-              this.state.fixedHeader >= 2
-                ? 'bait_sub_header_fixed'
-                : 'bait_sub_header'
-            }
-          />
-          <FakeBait
-            zIndex={32}
-            styleClass={
-              this.state.fixedHeader >= 3
-                ? 'fake_bait_sub_header_fixed'
-                : 'fake_bait_sub_header'
-            }
-          />
-        </div>
+const BaitList = () => {
+  return (
+    <div className="main-content">
+      <div className="bait content has_fixed_sub_header">
+        <h3 className="fixed sub_header">Bait</h3>
+        <ul className="list">
+          <ul className="sub_list">
+            <li className="list_header">
+              <h3>Worms</h3>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Night Crawlers</span>
+                <span className="right">$4.5</span>
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Red Wigglers</span>
+                <span className="right">$4.5</span>
+              </p>
+            </li>
+          </ul>
+          <ul className="sub_list">
+            <li className="list_header">
+              <h3>Minnows</h3>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Half Dozen</span>
+                <span className="right">$3</span>
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Dozen</span>
+                <span className="right">$6</span>
+              </p>
+            </li>
+          </ul>
+          <ul className="sub_list">
+            <li className="list_header">
+              <h3>Crickets</h3>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Half Tube</span>
+                <span className="right">$3</span>
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Full Tube</span>
+                <span className="right">$5</span>
+              </p>
+            </li>
+          </ul>
+          <ul className="sub_list">
+            <li className="list_header">
+              <h3>Liver</h3>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Chicken</span>
+                <span className="right">$4.5</span>
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Rooster</span>
+                <span className="right">$5</span>
+              </p>
+            </li>
+          </ul>
+          <ul className="sub_list">
+            <li className="list_header">
+              <h3>Misc.</h3>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Frozen Shrimp</span>
+                <span className="right">$4</span>
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Stink Bait</span>
+                <span className="right">(for the catfish)</span>
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Rubber Lures</span>
+                <span className="right">(for the bass)</span>
+              </p>
+            </li>
+            <li className="list-item">
+              <p>
+                <span className="left">Corn</span>
+                <span className="right">(for the carp)</span>
+              </p>
+            </li>
+          </ul>
+        </ul>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default BaitList;
