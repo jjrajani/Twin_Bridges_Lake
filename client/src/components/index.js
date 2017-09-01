@@ -3,9 +3,7 @@ import Header from './header/Header';
 import Landing from './landing/Landing';
 import Hamburger from './hamburger/Hamburger';
 import Gallery from './gallery/Gallery';
-import ReviewsList from './reviews/ReviewsList';
-import ReviewsDetail from './reviews/ReviewsDetail';
-import ReviewsNew from './reviews/ReviewsNew';
+import Reviews from './reviews/Reviews';
 import FishStock from './fish_stock/FishStock';
 import Admissions from './admissions/Admissions';
 import BaitList from './bait/BaitList';
@@ -19,9 +17,7 @@ export {
   Landing,
   Hamburger,
   Gallery,
-  ReviewsList,
-  ReviewsDetail,
-  ReviewsNew,
+  Reviews,
   FishStock,
   Admissions,
   BaitList,

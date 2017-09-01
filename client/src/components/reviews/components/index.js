@@ -1,7 +1,7 @@
-import RatingSelect from './rating_select/RatingSelect';
-import ReviewsDelete from './ReviewsDelete';
-import ReviewsRating from './ReviewsRating';
+import ReviewsHeader from './ReviewsHeader';
+import ReviewsList from './ReviewsList';
+import ReviewsNew from './new/ReviewsNew';
+import Modal from './Modal';
 import Filter from './Filter';
-import DateString from './DateString';
 
-export { Filter, RatingSelect, ReviewsDelete, ReviewsRating, DateString };
+export { Filter, ReviewsHeader, ReviewsList, ReviewsNew, Modal };

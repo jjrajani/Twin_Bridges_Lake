@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as actions from '../../../../actions';
+import * as actions from '../../../../../actions';
 import { connect } from 'react-redux';
 import ActiveStar from './ActiveStar';
 import InactiveStar from './InactiveStar';

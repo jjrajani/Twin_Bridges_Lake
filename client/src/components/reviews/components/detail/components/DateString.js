@@ -1,5 +1,5 @@
 import React from 'react';
-import * as DateFormatter from '../../../utils/dateFormatter';
+import * as DateFormatter from '../../../../../utils/dateFormatter';
 
 const DateString = date => {
   if (!date) return null;

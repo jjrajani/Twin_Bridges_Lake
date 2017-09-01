@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../../actions';
-import { RatingSelect } from './components';
+import * as actions from '../../../../actions';
+import RatingSelect from './rating_select/RatingSelect';
 
 class ReviewsNew extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class ReviewsNew extends Component {
     const inValidClass = this.state.inValid ? 'invalid' : '';
     return (
       <div className={`reviews_new ${inValidClass}`}>
-        <p className="close_btn" onClick={() => this.props.close()}>
+        <p className="close_btn" onClick={this.props.toggleModal}>
           <i className="fa fa-times" />
         </p>
         <form onSubmit={this.submitReview.bind(this)}>
@@ -101,5 +101,6 @@ function mapStateToProps({ currentReview, auth }) {
 export default connect(mapStateToProps, {
   ...actions.reviewActions,
   resetStars: actions.selectStarsActions.resetStars,
-  selectRating: actions.selectStarsActions.selectRating
+  selectRating: actions.selectStarsActions.selectRating,
+  toggleModal: actions.reviewModalActions.toggleModal
 })(ReviewsNew);
