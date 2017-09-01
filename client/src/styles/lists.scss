@@ -5,7 +5,7 @@
   border-bottom: none;
   background-color: lighten(blue, 30%);
   @media screen and (min-width: 1101px) {
-    margin: 2rem 0;
+    margin: 2rem 0 0;
     min-height: 0;
     &.first {
       margin-top: 2rem;
@@ -19,7 +19,6 @@
     border: solid pink 10px;
   }
   .list-item {
-    // border: solid green 1px;
     padding-top: 0.1rem;
     padding-bottom: 0.1rem;
   }
