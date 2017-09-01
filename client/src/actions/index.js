@@ -6,6 +6,7 @@ import * as galleryModalActions from './gallery_modal/actions';
 import * as galleryActions from './gallery/actions';
 import * as selectStarsActions from './selectStars/actions';
 import * as picsActions from './pics/actions';
+import * as locationActions from './location/actions';
 
 export {
   authActions,
@@ -15,5 +16,6 @@ export {
   selectStarsActions,
   galleryModalActions,
   galleryActions,
-  picsActions
+  picsActions,
+  locationActions
 };

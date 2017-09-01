@@ -32,8 +32,6 @@ function mapStateToProps({ pics }) {
   return { pics };
 }
 
-function mapDispatchToProps() {}
-
 export default connect(mapStateToProps, {
   fetchPics: actions.picsActions.fetchPics,
   toggleModal: actions.galleryModalActions.toggleModal,

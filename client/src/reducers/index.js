@@ -7,6 +7,7 @@ import galleryModalReducer from './gallery_modal/reducer';
 import galleryReducer from './gallery/reducer';
 import selectStarsReducer from './selectStars/reducer';
 import picsReducer from './pics/reducer';
+import locationReducer from './location/reducer';
 
 export default combineReducers({
   auth: authReducer,
@@ -16,5 +17,6 @@ export default combineReducers({
   showGalleryModal: galleryModalReducer,
   gallery: galleryReducer,
   selectStars: selectStarsReducer,
-  pics: picsReducer
+  pics: picsReducer,
+  location: locationReducer
 });

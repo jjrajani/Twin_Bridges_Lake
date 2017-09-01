@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
+import * as actions from '../../actions';
 /*
 https://github.com/tomchentw/react-google-maps
 */
@@ -7,30 +8,6 @@ https://github.com/tomchentw/react-google-maps
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
 export class Location extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showingInfoWindow: true,
-      activeMarker: {},
-      selectedPlace: {}
-    };
-  }
-  onMarkerClick(props, marker, e) {
-    this.setState({
-      selectedPlace: props,
-      activeMarker: marker,
-      showingInfoWindow: true
-    });
-  }
-
-  onMapClicked(props) {
-    if (this.state.showingInfoWindow) {
-      this.setState({
-        showingInfoWindow: false,
-        activeMarker: null
-      });
-    }
-  }
   render() {
     return (
       <div className="main-content">
@@ -44,10 +21,10 @@ export class Location extends Component {
                 lng: -83.9684561
               }}
               zoom={15}
-              onClick={this.onMapClicked.bind(this)}
+              onClick={this.props.onMapClicked.bind(this)}
             >
               <Marker
-                onClick={this.onMarkerClick.bind(this)}
+                onClick={this.props.onMarkerClick.bind(this)}
                 name={'Twin Bridges Lake'}
                 position={{
                   lat: 34.004325,
@@ -56,12 +33,12 @@ export class Location extends Component {
               />
 
               <InfoWindow
-                marker={this.state.activeMarker}
-                visible={this.state.showingInfoWindow}
+                marker={this.props.activeMarker}
+                visible={this.props.showingInfoWindow}
               >
                 <div>
                   <h1>
-                    {this.state.selectedPlace.name}
+                    {this.props.selectedPlace.name}
                   </h1>
                   <div>
                     <p>Open 24/7</p>
@@ -88,6 +65,18 @@ export class Location extends Component {
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyCexFsxDoQltJZDyF__z2ayYEKteqw2bJY'
-})(Location);
+function mapStateToProps({ location }) {
+  return {
+    showingInfoWindow: location.showingInfoWindow,
+    activeMarker: location.activeMarker,
+    selectedPlace: location.selectedPlace
+  };
+}
+export default connect(mapStateToProps, {
+  onMarkerClick: actions.locationActions.markerClick,
+  onMapClicked: actions.locationActions.mapClicked
+})(
+  GoogleApiWrapper({
+    apiKey: 'AIzaSyCexFsxDoQltJZDyF__z2ayYEKteqw2bJY'
+  })(Location)
+);
