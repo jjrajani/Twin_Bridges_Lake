@@ -17,8 +17,8 @@ class Gallery extends Component {
   render() {
     return (
       <div className="main-content our_story">
-        <div className="content has_fixed_sub_header">
-          <h3 className="fixed sub_header">Gallery</h3>
+        <div className="content">
+          <h3 className="sub_header">Gallery</h3>
           <div className="gallery">
             <ZoomImage
               close={this.closeModal.bind(this)}

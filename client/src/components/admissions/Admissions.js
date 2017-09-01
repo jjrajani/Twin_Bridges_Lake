@@ -3,8 +3,8 @@ import React from 'react';
 const Admissions = () => {
   return (
     <div className="main-content admissions">
-      <div className="content has_fixed_sub_header">
-        <h3 className="fixed sub_header">Admissions</h3>
+      <div className="content">
+        <h3 className="sub_header">Admissions</h3>
         <ul className="list">
           <ul className="sub_list">
             <li className="list_header">

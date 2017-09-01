@@ -30,8 +30,8 @@ class ReviewsList extends Component {
             </div>
           </div>
         </div>
-        <div className="content has_fixed_sub_header">
-          <h3 className="fixed sub_header">Reviews</h3>
+        <div className="content">
+          <h3 className="sub_header">Reviews</h3>
         </div>
         <div className="buttons_wrapper">
           <div className="buttons">
@@ -71,8 +71,8 @@ class ReviewsList extends Component {
             <Filter />
           </div>
         </div>
-        <div className="content has_fixed_sub_header">
-          <h3 className="fixed sub_header">Reviews</h3>
+        <div className="content">
+          <h3 className="sub_header">Reviews</h3>
           <ul className="reviews_list">
             {this.props.reviews.map((r, i) => {
               return <ReviewsDetail key={i} review={r} />;

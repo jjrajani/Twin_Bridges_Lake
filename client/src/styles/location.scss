@@ -1,7 +1,7 @@
 .location {
   .location_map {
     position: relative;
-    min-height: calc((100vh - 130px) * .7);
+    min-height: calc((100vh - 220px) * .7);
     width: 80%;
     margin: 0 auto;
     padding: 40px 0 0;
@@ -10,31 +10,30 @@
     }
   }
   .get_directions {
-    min-height: calc((100vh - 130px) * .3);
+    min-height: calc((100vh - 220px) * .3);
     margin: 0 auto;
     padding: 0 0 40px 0;
-    width: 80vw;
+    width: 80%;
     display: flex;
     align-items: flex-end;
     .button {
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
       border-radius: 4px;
-      text-align: center;
       border: solid #333 1px;
       background-color: blue;
       opacity: .6;
       cursor: pointer;
-      &:hover {
-        opacity: .7;
-      }
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       color: white;
       font-weight: 600;
       font-size: 1.1rem;
       letter-spacing: 0.08rem;
+      &:hover {
+        opacity: .7;
+      }
     }
   }
 }

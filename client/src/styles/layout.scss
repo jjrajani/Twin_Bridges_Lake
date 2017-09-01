@@ -11,6 +11,8 @@
       }
       .content {
         min-height: calc(100vh - 130px);
+        padding-top: 74px;
+
         .sub_header,
         .sub_content .sub_header {
           text-align: center;
@@ -19,10 +21,7 @@
             margin: 50px 0 20px;
           }
         }
-        &.has_fixed_sub_header {
-          padding-top: 74px;
-        }
-        .fixed.sub_header {
+        .sub_header {
           position: fixed;
           top: 80px;
           left: 0;

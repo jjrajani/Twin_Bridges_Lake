@@ -3,8 +3,8 @@ import React from 'react';
 const BaitList = () => {
   return (
     <div className="main-content">
-      <div className="bait content has_fixed_sub_header">
-        <h3 className="fixed sub_header">Bait</h3>
+      <div className="bait content">
+        <h3 className="sub_header">Bait</h3>
         <ul className="list">
           <ul className="sub_list">
             <li className="list_header">
