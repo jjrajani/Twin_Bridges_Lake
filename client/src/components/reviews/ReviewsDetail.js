@@ -12,7 +12,7 @@ const ReviewsDetail = ({ review }) => {
         <ReviewsRating stars={review.rating} />
       </div>
       <div className="btm">
-        <p>
+        <p className="review_text">
           {review.review}
         </p>
         {DateString(review.createdAt)}
