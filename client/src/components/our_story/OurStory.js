@@ -3,8 +3,8 @@ import React from 'react';
 const OurStory = () => {
   return (
     <div className="main-content our_story">
-      <div className="content">
-        <h2 className="sub_header">Our Story</h2>
+      <div className="content has_fixed_sub_header">
+        <h3 className="fixed sub_header">Our Story</h3>
         <p className="text">
           It all began a long long time ago when things were fair and there was
           nothing but a textao in ths town. Along came a man who had vision and
