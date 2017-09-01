@@ -11,6 +11,7 @@ import Admissions from './admissions/Admissions';
 import BaitList from './bait/BaitList';
 import OurStory from './our_story/OurStory';
 import Location from './location/Location';
+import Login from './login/Login';
 
 export {
   App,
@@ -25,5 +26,6 @@ export {
   Admissions,
   BaitList,
   OurStory,
-  Location
+  Location,
+  Login
 };
