@@ -34,7 +34,7 @@ export class Location extends Component {
   render() {
     return (
       <div className="main-content">
-        <div className="directions content">
+        <div className="location content">
           <div className="location_map">
             <Map
               google={this.props.google}

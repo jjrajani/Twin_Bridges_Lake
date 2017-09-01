@@ -5,10 +5,12 @@
     .main-content {
       max-width: 1100px;
       margin: 0 auto;
+      min-height: calc(100vh - 130px);
       @media screen and (min-width: 1101px) {
         border: solid transparent 1px;
       }
       .content {
+        min-height: calc(100vh - 130px);
         .sub_header,
         .sub_content .sub_header {
           text-align: center;
