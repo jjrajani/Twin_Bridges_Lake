@@ -3,28 +3,32 @@
   position: relative;
   margin-top: -30px;
   &.no_scroll {
-    // margin-top: 80px;
     max-height: calc(100vh - 130px);
     overflow: hidden;
   }
-  .buttons {
+  .buttons_wrapper {
     position: fixed;
     left: 0;
+    top: 153px;
     height: 70px;
     background-color: white;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     border-bottom: solid #777 1px;
     padding: 0 30px;
-    .leave_review.btn {
-      font-weight: 600;
-      border-radius: 4px;
-      padding: .5rem .65rem;
-      border: solid #ccc 1px;
-      cursor: pointer;
-      // display: inline-block;
+    .buttons {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .leave_review.btn {
+        font-weight: 600;
+        border-radius: 4px;
+        padding: .5rem .65rem;
+        border: solid #ccc 1px;
+        cursor: pointer;
+      }
     }
   }
   .reviews_list {

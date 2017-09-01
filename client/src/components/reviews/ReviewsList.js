@@ -30,13 +30,18 @@ class ReviewsList extends Component {
             </div>
           </div>
         </div>
-        <div className="buttons">
-          <p
-            className="leave_review btn"
-            onClick={() => this.props.toggleModal()}
-          >
-            Leave Review
-          </p>
+        <div className="content has_fixed_sub_header">
+          <h3 className="fixed sub_header">Reviews</h3>
+        </div>
+        <div className="buttons_wrapper">
+          <div className="buttons">
+            <p
+              className="leave_review btn"
+              onClick={() => this.props.toggleModal()}
+            >
+              Leave Review
+            </p>
+          </div>
         </div>
       </div>
     );
@@ -55,16 +60,19 @@ class ReviewsList extends Component {
             </div>
           </div>
         </div>
-        <div className="buttons">
-          <p
-            className="leave_review btn"
-            onClick={() => this.props.toggleModal()}
-          >
-            Leave Review
-          </p>
-          <Filter />
+        <div className="buttons_wrapper">
+          <div className="buttons">
+            <p
+              className="leave_review btn"
+              onClick={() => this.props.toggleModal()}
+            >
+              Leave Review
+            </p>
+            <Filter />
+          </div>
         </div>
-        <div className="content">
+        <div className="content has_fixed_sub_header">
+          <h3 className="fixed sub_header">Reviews</h3>
           <ul className="reviews_list">
             {this.props.reviews.map((r, i) => {
               return <ReviewsDetail key={i} review={r} />;
