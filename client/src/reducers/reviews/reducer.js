@@ -1,19 +1,31 @@
 import t from '../../actions/reviews/types';
 
-export default function(state = [], action) {
+export default function(state = { list: [], modal: false }, action) {
   switch (action.type) {
     case t.FETCH_REVIEWS: {
-      return action.payload;
+      let newState = Object.assign({}, state);
+      newState.list = action.payload;
+      return newState;
     }
     case t.CREATE_REVIEW: {
-      return [action.payload, ...state];
+      let newState = Object.assign({}, state);
+      newState.list = [action.payload, ...state.list];
+      return newState;
     }
     case t.DELETE_REVIEW: {
-      return state.filter(r => r._id !== action.payload);
+      let newState = Object.assign({}, state);
+      newState.list = state.list.filter(r => r._id !== action.payload);
+      return newState;
     }
     case t.FILTER_REVIEWS: {
-      console.log('filtering reviews', action.payload);
-      return action.payload;
+      let newState = Object.assign({}, state);
+      newState.list = action.payload;
+      return newState;
+    }
+    case t.TOGGLE_MODAL: {
+      let newState = Object.assign({}, state);
+      newState.modal = !state.modal;
+      return newState;
     }
     default:
       return state;

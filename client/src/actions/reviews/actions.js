@@ -34,3 +34,7 @@ export const filterReviews = filter => async dispatch => {
         ];
   dispatch({ type: t.FILTER_REVIEWS, payload: res });
 };
+
+export const toggleModal = () => async dispatch => {
+  dispatch({ type: t.TOGGLE_MODAL });
+};

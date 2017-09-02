@@ -17,5 +17,5 @@ const ReviewsHeader = ({ toggleModal }) => {
 };
 
 export default connect(null, {
-  toggleModal: actions.reviewModalActions.toggleModal
+  toggleModal: actions.reviewsActions.toggleModal
 })(ReviewsHeader);

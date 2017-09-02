@@ -19,7 +19,7 @@ class ReviewsList extends Component {
 }
 
 function mapStateToProps({ reviews }) {
-  return { reviews };
+  return { reviews: reviews.list };
 }
 
 export default connect(mapStateToProps, {

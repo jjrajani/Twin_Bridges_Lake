@@ -9,7 +9,6 @@ export default function(state = { currentImage: '', modal: false }, action) {
       };
     }
     case t.TOGGLE_MODAL: {
-      console.log('toggling modal', state);
       return { currentImage: state.currentImage, modal: !state.modal };
     }
     default:

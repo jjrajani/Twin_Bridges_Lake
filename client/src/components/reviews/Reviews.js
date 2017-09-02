@@ -4,10 +4,10 @@ import { ReviewsHeader, ReviewsList, ReviewsNew } from './components';
 import { Modal } from '../';
 import * as actions from '../../actions';
 
-const Reviews = ({ showReviewModal, toggleModal }) => {
+const Reviews = ({ showModal, toggleModal }) => {
   return (
     <div className={`main-content reviews`}>
-      <Modal show={showReviewModal} toggleModal={toggleModal}>
+      <Modal show={showModal} toggleModal={toggleModal}>
         <ReviewsNew />
       </Modal>
       <ReviewsHeader />
@@ -19,8 +19,8 @@ const Reviews = ({ showReviewModal, toggleModal }) => {
   );
 };
 
-function mapStateToProps({ showReviewModal }) {
-  return { showReviewModal };
+function mapStateToProps({ reviews }) {
+  return { showModal: reviews.modal };
 }
 
 export default connect(mapStateToProps, {

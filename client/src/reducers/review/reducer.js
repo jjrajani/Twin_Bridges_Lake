@@ -7,7 +7,7 @@ export default function(
   switch (action.type) {
     case t.UPDATE_REVIEW: {
       let newState = Object.assign({}, state);
-      newState[action.payload.name] = action.payload.value;
+      newState.review[action.payload.name] = action.payload.value;
       return newState;
     }
     case t.RESET_REVIEW: {
@@ -15,7 +15,7 @@ export default function(
     }
     case t.SELECT_RATING: {
       let newState = Object.assign({}, state);
-      newState.rating = action.payload;
+      newState.review.rating = action.payload;
       return newState;
     }
     default:
