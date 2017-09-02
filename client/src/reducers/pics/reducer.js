@@ -10,7 +10,6 @@ export default function(state = [], action) {
       return [action.payload, ...state];
     case t.DELETE_PIC:
       return state.filter(p => p.id !== action.payload);
-    // return action.payload || false;
     default:
       return state;
   }

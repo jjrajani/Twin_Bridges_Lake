@@ -14,9 +14,11 @@ export default function(
       return { text: '', username: 'guest', rating: 0 };
     }
     case t.SELECT_RATING: {
-      let newState = Object.assign({}, state);
-      newState.review.rating = action.payload;
-      return newState;
+      return {
+        text: state.text,
+        username: state.username,
+        rating: action.payload
+      };
     }
     default:
       return state;
