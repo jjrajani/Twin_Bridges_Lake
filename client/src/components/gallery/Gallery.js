@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImageList, ZoomImage } from './components';
+import { ImageList, GalleryModal } from './components';
 
 const Gallery = () => {
   return (
@@ -7,7 +7,7 @@ const Gallery = () => {
       <div className="content">
         <h3 className="sub_header">Gallery</h3>
         <div className="gallery">
-          <ZoomImage />
+          <GalleryModal />
           <ImageList />
         </div>
       </div>

@@ -11,6 +11,7 @@ import OurStory from './our_story/OurStory';
 import Location from './location/Location';
 import Login from './login/Login';
 import Footer from './footer/Footer';
+import Modal from './modal/Modal';
 
 export {
   App,
@@ -25,5 +26,6 @@ export {
   OurStory,
   Location,
   Login,
-  Footer
+  Footer,
+  Modal
 };

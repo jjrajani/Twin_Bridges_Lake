@@ -5,6 +5,7 @@ const OurStory = () => {
     <div className="main-content our_story">
       <div className="content">
         <h3 className="sub_header">Our Story</h3>
+        <div className="image" />
         <p className="text">
           It all began a long long time ago when things were fair and there was
           nothing but a textao in ths town. Along came a man who had vision and

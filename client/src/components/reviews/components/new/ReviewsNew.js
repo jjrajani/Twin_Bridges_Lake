@@ -32,9 +32,6 @@ class ReviewsNew extends Component {
     const inValidClass = this.state.inValid ? 'invalid' : '';
     return (
       <div className={`reviews_new ${inValidClass}`}>
-        <p className="close_btn" onClick={this.props.toggleModal}>
-          <i className="fa fa-times" />
-        </p>
         <form onSubmit={this.submitReview.bind(this)}>
           <div className={`input-row rating`}>
             <label>Rating</label>
@@ -101,6 +98,5 @@ function mapStateToProps({ currentReview, auth }) {
 export default connect(mapStateToProps, {
   ...actions.reviewActions,
   resetStars: actions.selectStarsActions.resetStars,
-  selectRating: actions.selectStarsActions.selectRating,
-  toggleModal: actions.reviewModalActions.toggleModal
+  selectRating: actions.selectStarsActions.selectRating
 })(ReviewsNew);
