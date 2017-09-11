@@ -24,5 +24,5 @@ function mapStateToProps({ reviews }) {
 }
 
 export default connect(mapStateToProps, {
-  toggleModal: actions.reviewModalActions.toggleModal
+  toggleModal: actions.reviewsActions.toggleModal
 })(Reviews);
