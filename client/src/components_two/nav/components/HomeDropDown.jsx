@@ -14,7 +14,7 @@ const HomeDropDown = () =>
     <MenuItem
       eventKey={1.1}
       href="/#about_us"
-      onClick={() => scroller.scrollTo('about_us', scrollPadding.header)}
+      onClick={() => {scroller.scrollTo('about_us', scrollPadding.header})}
     >
       About Us
     </MenuItem>

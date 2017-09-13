@@ -17,7 +17,7 @@ const Contact = () => {
           </h1>
           <p className="blurb_pad">
             Please feel free to contact us if you have any questions, comments,
-            or concers.
+            or concerns.
           </p>
           <div className="contact_info">
             <div className="sub_info">
