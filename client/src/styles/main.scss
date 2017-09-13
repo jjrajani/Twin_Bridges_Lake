@@ -1,3 +1,5 @@
+// min-width 769px
+
 * {
   box-sizing: border-box;
 }
@@ -9,65 +11,43 @@ body {
 
 * {
   color: #111;
-  letter-spacing: 0.035rem;
+  font-size: 1.75rem;
+  letter-spacing: 0.05rem;
   font-family: 'Raleway', sans-serif;
 }
-
-a {
-  text-decoration: none;
-  cursor: pointer;
-  &.link {
-    &:hover {
-      background-color: white;
-      opacity: 0.5;
-    }
-  }
+.bold {
+  font-weight: 600;
 }
-
-ul,
-li {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.small_text {
+  font-size: 1.3rem;
 }
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.navbar-header {
+  max-width: 100vw;
 }
-
-.col {
-  flex-direction: column;
+.navbar-toggle {
+  margin-right: 30px !important;
 }
-
-.hidden {
-  display: none;
-}
-
-.no_scroll {
-  // overflow: hidden;
-  // height: 100vh;
-  // width: 100vw;
-}
-
 @import 'header.scss';
-@import 'hamburger.scss';
-@import 'landing.scss';
-@import 'review_stars.scss';
-@import 'review_detail.scss';
-@import 'review_delete.scss';
-@import 'rating_select.scss';
-@import 'reviews_new.scss';
-@import 'modal.scss';
-@import 'reviews.scss';
-@import 'form.scss';
-@import 'filter.scss';
-@import 'layout.scss';
-@import 'gallery.scss';
-@import 'zoom_image.scss';
-@import 'admissions.scss';
-@import 'lists.scss';
-@import 'footer.scss';
 @import 'location.scss';
-@import 'our_story.scss';
+@import 'admissions.scss';
+@import 'kids_pond.scss';
+@import 'contact.scss';
+@import 'home.scss';
+
+// @import 'hamburger.scss';
+// @import 'landing.scss';
+// @import 'review_stars.scss';
+// @import 'review_detail.scss';
+// @import 'review_delete.scss';
+// @import 'rating_select.scss';
+// @import 'reviews_new.scss';
+// @import 'modal.scss';
+// @import 'reviews.scss';
+// @import 'form.scss';
+// @import 'filter.scss';
+// @import 'layout.scss';
+// @import 'gallery.scss';
+// @import 'zoom_image.scss';
+// @import 'lists.scss';
+// @import 'footer.scss';
+// @import 'our_story.scss';
