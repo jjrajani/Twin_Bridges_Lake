@@ -1,4 +1,3 @@
-import axios from 'axios';
 import t from './types';
 
 export const toggleLanguage = language => dispatch => {

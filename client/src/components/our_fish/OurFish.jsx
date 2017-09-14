@@ -9,7 +9,7 @@ class OurFish extends Component {
         <div className="row">
           <div className="col-xs-12">
             <div className="logo">
-              <img src={FISH_ICON} className="fish_icon" />
+              <img src={FISH_ICON} className="fish_icon" alt="our fish icon" />
               <h1>Our Fish</h1>
             </div>
             <p>
