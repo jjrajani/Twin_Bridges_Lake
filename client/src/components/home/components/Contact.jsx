@@ -34,7 +34,9 @@ const Contact = () => {
             </div>
             <div className="sub_info">
               <i className="small_fa fa fa-envelope" />
-              <p>twin.bridges.lake.fishing@gmail.com</p>
+              <a href="mailto:twin.bridges.lake.fishing@gmail.com">
+                twin.bridges.lake.fishing@gmail.com
+              </a>
             </div>
           </div>
         </div>
