@@ -1,31 +1,10 @@
 import App from './App';
+import Nav from './nav/Nav';
 import Header from './header/Header';
-import Landing from './landing/Landing';
-import Hamburger from './hamburger/Hamburger';
+import Home from './home/Home';
 import Gallery from './gallery/Gallery';
-import Reviews from './reviews/Reviews';
-import FishStock from './fish_stock/FishStock';
-import Admissions from './admissions/Admissions';
-import BaitList from './bait/BaitList';
-import OurStory from './our_story/OurStory';
-import Location from './location/Location';
-import Login from './login/Login';
-import Footer from './footer/Footer';
-import Modal from './modal/Modal';
+import OurFish from './our_fish/OurFish';
+import Rules from './rules/Rules';
+import PageNotFound from './page_not_found/PageNotFound';
 
-export {
-  App,
-  Header,
-  Landing,
-  Hamburger,
-  Gallery,
-  Reviews,
-  FishStock,
-  Admissions,
-  BaitList,
-  OurStory,
-  Location,
-  Login,
-  Footer,
-  Modal
-};
+export { App, Nav, Header, Home, Gallery, Rules, OurFish, PageNotFound };

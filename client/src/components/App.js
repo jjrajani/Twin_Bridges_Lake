@@ -1,41 +1,26 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-
-import {
-  Header,
-  Landing,
-  Gallery,
-  Reviews,
-  FishStock,
-  Admissions,
-  BaitList,
-  OurStory,
-  Location,
-  Footer,
-  Hamburger
-} from './';
+import { Home, Nav, Header, Gallery, Rules, OurFish, PageNotFound } from './';
 
 const App = ({ fetchUser }) => {
   fetchUser();
   return (
     <div className="wrapper">
+      <Nav />
       <Header />
-      <Hamburger />
       <BrowserRouter>
-        <div className="main-content-wrapper">
-          <Route exact path="/" component={Landing} />
-          <Route exact path="/story" component={OurStory} />
-          <Route exact path="/location" component={Location} />
-          <Route exact path="/reviews" component={Reviews} />
-          <Route exact path="/bait" component={BaitList} />
-          <Route exact path="/admissions" component={Admissions} />
-          <Route exact path="/gallery" component={Gallery} />
-          <Route exact path="/fish" component={FishStock} />
+        <div className="container">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/gallery" component={Gallery} />
+            <Route exact path="/rules" component={Rules} />
+            <Route exact path="/our_fish" component={OurFish} />
+            <Route component={PageNotFound} />
+          </Switch>
         </div>
       </BrowserRouter>
-      <Footer />
     </div>
   );
 };

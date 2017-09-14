@@ -5,16 +5,14 @@ import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 import './styles/main.css';
 
-// import { App } from './components';
-import { AppTwo } from './components_two';
+import { App } from './components';
 import reducers from './reducers';
-// import actions from './actions';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
   <Provider store={store}>
-    <AppTwo />
+    <App />
   </Provider>,
   document.getElementById('root')
 );

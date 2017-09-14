@@ -1,0 +1,26 @@
+.rules {
+  margin-bottom: 50px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+  }
+  .logo {
+    display: flex;
+    align-items: flex-end;
+    margin: 2rem 0;
+    i {
+      font-size: 4rem;
+      margin: 0 10px 0 0;
+    }
+    h1 {
+      margin: 0;
+    }
+  }
+  .buttons {
+    button {
+      margin-left: 2rem;
+    }
+  }
+}

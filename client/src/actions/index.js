@@ -5,6 +5,7 @@ import * as galleryActions from './gallery/actions';
 import * as selectStarsActions from './selectStars/actions';
 import * as picsActions from './pics/actions';
 import * as locationActions from './location/actions';
+import * as rulesActions from './rules/actions';
 
 export {
   authActions,
@@ -13,5 +14,6 @@ export {
   selectStarsActions,
   galleryActions,
   picsActions,
-  locationActions
+  locationActions,
+  rulesActions
 };

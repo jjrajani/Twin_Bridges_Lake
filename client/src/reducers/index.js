@@ -1,18 +1,14 @@
 import { combineReducers } from 'redux';
-import authReducer from './auth/reducer';
-import reviewsReducer from './reviews/reducer';
-import reviewReducer from './review/reducer';
+// import authReducer from './auth/reducer';
 import galleryReducer from './gallery/reducer';
-import selectStarsReducer from './selectStars/reducer';
-import picsReducer from './pics/reducer';
 import locationReducer from './location/reducer';
+import picsReducer from './pics/reducer';
+import rulesReducer from './rules/reducer';
 
 export default combineReducers({
-  auth: authReducer,
-  reviews: reviewsReducer,
-  currentReview: reviewReducer,
+  // auth: authReducer,
   gallery: galleryReducer,
-  selectStars: selectStarsReducer,
-  pics: picsReducer,
-  location: locationReducer
+  location: locationReducer,
+  language: rulesReducer,
+  pics: picsReducer
 });

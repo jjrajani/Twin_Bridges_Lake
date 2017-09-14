@@ -1,5 +1,3 @@
-// min-width 769px
-
 * {
   box-sizing: border-box;
 }
@@ -21,14 +19,15 @@ body {
 .small_text {
   font-size: 1.3rem;
 }
-.navbar-header {
-  max-width: 100vw;
-}
-.navbar-toggle {
-  margin-right: 30px !important;
-}
-a:focus {
-  outline: none;
+// .navbar-header {
+//   max-width: 100vw;
+// }
+// .navbar-toggle {
+//   margin-right: 30px !important;
+// }
+a:focus,
+button {
+  outline: none !important;
 }
 @import 'header.scss';
 @import 'location.scss';
@@ -38,21 +37,4 @@ a:focus {
 @import 'home.scss';
 @import 'our_fish.scss';
 @import 'gallery.scss';
-
-// @import 'hamburger.scss';
-// @import 'landing.scss';
-// @import 'review_stars.scss';
-// @import 'review_detail.scss';
-// @import 'review_delete.scss';
-// @import 'rating_select.scss';
-// @import 'reviews_new.scss';
-// @import 'modal.scss';
-// @import 'reviews.scss';
-// @import 'form.scss';
-// @import 'filter.scss';
-// @import 'layout.scss';
-// @import 'gallery.scss';
-// @import 'zoom_image.scss';
-// @import 'lists.scss';
-// @import 'footer.scss';
-// @import 'our_story.scss';
+@import 'rules.scss';
