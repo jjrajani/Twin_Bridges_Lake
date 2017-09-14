@@ -17,7 +17,7 @@ const Hours = () => {
           </h1>
           <p className="blurb_pad">Open 24/7</p>
           <p className="blurb_pad">
-            You read that right. Becaue the largest Catfish bite at night, Twin
+            You read that right. Because the largest Catfish bite at night, Twin
             Bridges Lake stays open all the time.
           </p>
         </div>

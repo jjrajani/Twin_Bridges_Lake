@@ -16,7 +16,7 @@ const KidsPond = () => {
             Kids Pond
           </h1>
           <p className="blurb_pad">
-            We have a kids pond that is overstocked so the kids are gauranteed
+            We have a kids pond that is overstocked so the kids are guaranteed
             to catch.
           </p>
           <div className="col-md-12">

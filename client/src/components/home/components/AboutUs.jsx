@@ -15,7 +15,7 @@ const AboutUs = () => {
             About Us
           </h1>
           <p className="blurb_pad">
-            Twin Bridges Lake features a 15 acre lake stocked with Catfish. The
+            Twin Bridges Lake features a 10 acre lake stocked with Catfish. The
             fish in our lake range anywhere from 1/2 pound to over 70lbs! The
             lake also has a large native population of Bass, Bream, Carp, and
             Crappie. Our bait and tackle shop is stocked with rods, reels, bait
