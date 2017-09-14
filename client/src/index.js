@@ -10,10 +10,15 @@ import { App } from './components';
 import reducers from './reducers';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
-http.get('http://www.twinbridgeslake.herokuapp.com');
+http.get('http://www.twinbridgeslake.fish');
 
 setInterval(function() {
-  http.get('http://twinbridgeslake.herokuapp.com');
+  http.get('http://twinbridgeslake.fish');
+  console.log('get loakd');
+}, 1780);
+
+setInterval(function() {
+  http.get('http://twinbridgeslake.fish');
 }, 1780000);
 ReactDOM.render(
   <Provider store={store}>
