@@ -17,7 +17,9 @@ class Rules extends Component {
             <div className="header">
               <div className="logo">
                 <i className="fa fa-list" />
-                <h1>Rules</h1>
+                <h1>
+                  {this.props.language === 'english' ? 'Rules' : 'Reglas'}
+                </h1>
               </div>
               <div className="buttons">
                 <button
