@@ -27,12 +27,17 @@ body {
 .navbar-toggle {
   margin-right: 30px !important;
 }
+a:focus {
+  outline: none;
+}
 @import 'header.scss';
 @import 'location.scss';
 @import 'admissions.scss';
 @import 'kids_pond.scss';
 @import 'contact.scss';
 @import 'home.scss';
+@import 'our_fish.scss';
+@import 'gallery.scss';
 
 // @import 'hamburger.scss';
 // @import 'landing.scss';

@@ -1,0 +1,23 @@
+@mixin sm-screen {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md-screen {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg-screen {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xl-screen {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}

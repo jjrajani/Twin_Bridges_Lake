@@ -9,7 +9,7 @@ import t from './types';
  */
 export const fetchPics = () => async dispatch => {
   const res = await axios.get(
-    'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=29224b1aa64ce41ffc9966ef92598e22&user_id=154182966@N06&per_page=10&format=json&nojsoncallback=1'
+    'https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=29224b1aa64ce41ffc9966ef92598e22&user_id=154182966@N06&per_page=20&format=json&nojsoncallback=1'
   );
   let photos = res.data.photos.photo.map(p => {
     return buildURL(p.server, p.id, p.secret);
