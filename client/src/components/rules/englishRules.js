@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ENGLISH_RULES = [
-  <p className="bold">Fish 10 pounds or greater must be released</p>,
+  <p className="bold">Fish 10 pounds or greater must be released.</p>,
   <p>
     All vehicles/customers <span className="bold">
       check-in & check-out
@@ -26,7 +26,7 @@ const ENGLISH_RULES = [
     No cleaning of fish on premises. Please clean up your area during and after
     your stay.
   </p>,
-  <p>No firearms</p>,
+  <p>No firearms.</p>,
   <p>
     No open ground fires allowed. We provide burn barrels if you would like to
     have a fire.
