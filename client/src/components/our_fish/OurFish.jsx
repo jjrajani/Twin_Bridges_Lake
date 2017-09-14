@@ -19,7 +19,7 @@ class OurFish extends Component {
             </p>
             <div className="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
               <div className="alert alert-success text-center">
-                We do not feed our fish so you know theyre always biting.
+                We do not feed our fish so you know they're always biting.
               </div>
             </div>
           </div>
