@@ -3,10 +3,9 @@ import React from 'react';
 const ENGLISH_RULES = [
   <p className="bold">Fish 10 pounds or greater must be released.</p>,
   <p>
-    All vehicles/customers <span className="bold">
-      check-in & check-out
-    </span>{' '}
-    with management inside bait shop.
+    All vehicles/customers must{' '}
+    <span className="bold">check-in & check-out</span> with management inside
+    bait shop.
   </p>,
   <p>Three Rod limit per customer.</p>,
   <p>
