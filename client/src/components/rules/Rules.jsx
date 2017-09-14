@@ -36,7 +36,7 @@ class Rules extends Component {
             </button>
           </div>
         </div>
-        <div className="col-xs-12">
+        <div className="col-xs-12 rules_list">
           {this.props.language === 'english'
             ? <EnglishRules />
             : <SpanishRules />}
