@@ -1,11 +1,7 @@
+@import 'media_queries.scss';
+
 .rules {
   margin-bottom: 50px;
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 2rem 0;
-  }
   .logo {
     display: flex;
     align-items: flex-end;
@@ -19,6 +15,8 @@
     }
   }
   .buttons {
+    text-align: right;
+    margin-top: 2rem;
     button {
       margin-left: 2rem;
     }

@@ -13,35 +13,33 @@ class Rules extends Component {
     return (
       <div className="rules">
         <div className="row">
-          <div className="col-xs-12">
-            <div className="header">
-              <div className="logo">
-                <i className="fa fa-list" />
-                <h1>
-                  {this.props.language === 'english' ? 'Rules' : 'Reglas'}
-                </h1>
-              </div>
-              <div className="buttons">
-                <button
-                  className={ENGLISH_BUTTON_CLASS}
-                  onClick={this.props.toggleLanguage.bind(this, 'english')}
-                >
-                  English
-                </button>
-                <button
-                  className={SPANISH_BUTTON_CLASS}
-                  onClick={this.props.toggleLanguage.bind(this, 'spanish')}
-                >
-                  Spanish
-                </button>
-              </div>
+          <div className="col-xs-12 col-sm-6">
+            <div className="logo">
+              <i className="fa fa-list" />
+              <h1>
+                {this.props.language === 'english' ? 'Rules' : 'Reglas'}
+              </h1>
             </div>
           </div>
-          <div className="col-xs-12">
-            {this.props.language === 'english'
-              ? <EnglishRules />
-              : <SpanishRules />}
+          <div className="col-xs-12 col-sm-6 buttons">
+            <button
+              className={ENGLISH_BUTTON_CLASS}
+              onClick={this.props.toggleLanguage.bind(this, 'english')}
+            >
+              English
+            </button>
+            <button
+              className={SPANISH_BUTTON_CLASS}
+              onClick={this.props.toggleLanguage.bind(this, 'spanish')}
+            >
+              Spanish
+            </button>
           </div>
+        </div>
+        <div className="col-xs-12">
+          {this.props.language === 'english'
+            ? <EnglishRules />
+            : <SpanishRules />}
         </div>
       </div>
     );
