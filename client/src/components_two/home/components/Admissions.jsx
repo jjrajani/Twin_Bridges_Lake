@@ -34,7 +34,7 @@ const Admissions = () => {
             </li>
           </ul>
           <p className="blurb_pad small_text">
-            Prices are per session. Sessions start at 7am and 7pm
+            Prices are per shift. We have a day shift and a night shift.
           </p>
         </div>
       </div>

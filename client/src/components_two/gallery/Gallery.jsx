@@ -20,18 +20,29 @@ class Gallery extends Component {
             <p>
               Checkout some of the fish that were caught at Twin Bridges Lake.
             </p>
+            <p>
+              Email pictures of your catches to{' '}
+              <a href="mailto:twin.bridges.lake.fishing@gmail.com">
+                twin.bridges.lake.fishing@gmail.com
+              </a>{' '}
+              and we will add them to the gallery!
+            </p>
           </div>
           <div className="col-xs-12">
             <ul className="image_list">
               {this.props.pics.map(p => {
                 return (
-                  <div className="img_wrapper col-xs-12 col-sm-6 col-md-4">
+                  <a
+                    href={p}
+                    className="img_wrapper col-xs-12 col-sm-6 col-md-4"
+                    target="blank"
+                  >
                     <li
                       key={p}
                       className="image_item"
                       style={{ backgroundImage: `url(${p})` }}
                     />
-                  </div>
+                  </a>
                 );
               })}
             </ul>
