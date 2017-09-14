@@ -13,12 +13,12 @@ const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 http.get('http://www.twinbridgeslake.fish');
 
 setInterval(function() {
-  http.get('http://twinbridgeslake.fish');
+  http.get('http://www.twinbridgeslake.fish');
   console.log('get loakd');
 }, 1780);
 
 setInterval(function() {
-  http.get('http://twinbridgeslake.fish');
+  http.get('http://www.twinbridgeslake.fish');
 }, 1780000);
 ReactDOM.render(
   <Provider store={store}>
