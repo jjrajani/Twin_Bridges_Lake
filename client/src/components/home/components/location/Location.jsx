@@ -1,6 +1,6 @@
 import React from 'react';
-import LocationMap from './components/LocationMap.js';
-import GetDirections from './components/GetDirections.js';
+import LocationMap from './components/LocationMap';
+import GetDirections from './components/GetDirections';
 import Scroll from 'react-scroll';
 const ScrollElement = Scroll.Element;
 /*
@@ -21,7 +21,12 @@ const Location = () => {
             Lawrenceville.
           </p>
           <div className="location_map">
-            <LocationMap />
+            <LocationMap
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `300px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
           </div>
           <GetDirections />
         </div>
