@@ -1,55 +1,13 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import * as actions from '../../actions';
-import EnglishRules from './components/EnglishRules';
-import SpanishRules from './components/SpanishRules';
+import { ListRules, RulesHeader, SelectLanguage } from './components';
 
-class Rules extends Component {
-  render() {
-    const ENGLISH_BUTTON_CLASS =
-      this.props.language === 'english' ? 'btn btn-primary' : 'btn btn-default';
-    const SPANISH_BUTTON_CLASS =
-      this.props.language === 'spanish' ? 'btn btn-primary' : 'btn btn-default';
-    return (
-      <div className="rules">
+const Rules = () =>
+    <div className="rules">
         <div className="row">
-          <div className="col-xs-12 col-sm-6">
-            <div className="logo">
-              <i className="fa fa-list" />
-              <h1>
-                {this.props.language === 'english' ? 'Rules' : 'Reglas'}
-              </h1>
-            </div>
-          </div>
-          <div className="col-xs-12 col-sm-6 buttons">
-            <button
-              className={ENGLISH_BUTTON_CLASS}
-              onClick={this.props.toggleLanguage.bind(this, 'english')}
-            >
-              English
-            </button>
-            <button
-              className={SPANISH_BUTTON_CLASS}
-              onClick={this.props.toggleLanguage.bind(this, 'spanish')}
-            >
-              Spanish
-            </button>
-          </div>
+            <RulesHeader />
+            <SelectLanguage />
         </div>
-        <div className="col-xs-12 rules_list">
-          {this.props.language === 'english'
-            ? <EnglishRules />
-            : <SpanishRules />}
-        </div>
-      </div>
-    );
-  }
-}
+        <ListRules />
+    </div>;
 
-function mapStateToProps({ language }) {
-  return { language };
-}
-
-export default connect(mapStateToProps, {
-  toggleLanguage: actions.rulesActions.toggleLanguage
-})(Rules);
+export default Rules;

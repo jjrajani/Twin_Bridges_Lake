@@ -52,21 +52,6 @@ class Gallery extends Component {
         );
     }
 }
-// const Gallery = ({ fetchPics, pics, selectImage }) => {
-//   return (
-//     <ul className="image-list">
-//       {pics.map(p => {
-//         return (
-//           <li
-//             key={p}
-//             className="image-item"
-//             style={{ backgroundImage: `url(${p})` }}
-//           />
-//         );
-//       })}
-//     </ul>
-//   );
-// };
 
 function mapStateToProps({ pics }) {
     return { pics };
@@ -76,4 +61,3 @@ export default connect(mapStateToProps, {
     fetchPics: actions.picsActions.fetchPics,
     selectImage: actions.galleryActions.selectImage
 })(Gallery);
-//onClick={selectImage.bind(this, p)}
