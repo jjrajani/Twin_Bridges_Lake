@@ -1,4 +1,5 @@
 import React from 'react';
+import GOOGLE_API_KEY from './config/keys';
 import LocationMap from './components/LocationMap';
 import GetDirections from './components/GetDirections';
 import Scroll from 'react-scroll';
@@ -23,9 +24,7 @@ const Location = () => {
           </p>
           <div className="location_map">
             <LocationMap
-              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${process
-                .env
-                .REACT_APP_GOOGLE_API_KEY}&libraries=geometry,drawing,places`}
+              googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=${GOOGLE_API_KEY}&libraries=geometry,drawing,places`}
               loadingElement={<div style={{ height: `100%` }} />}
               containerElement={<div style={{ height: `300px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
