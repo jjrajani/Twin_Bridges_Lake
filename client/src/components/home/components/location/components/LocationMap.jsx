@@ -24,7 +24,7 @@ const LocationMap = compose(
   withGoogleMap
 )(props =>
   <GoogleMap
-    defaultZoom={15}
+    defaultZoom={14}
     defaultCenter={{ lat: 34.004436, lng: -83.968197 }}
   >
     <Marker

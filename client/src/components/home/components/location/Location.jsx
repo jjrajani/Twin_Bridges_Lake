@@ -25,7 +25,7 @@ const Location = () => {
             <LocationMap
               googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBdV3zDcGG6qy5hB_JL42TvRVIypqbUnd0&libraries=geometry,drawing,places`}
               loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ height: `300px` }} />}
+              containerElement={<div style={{ height: `450px` }} />}
               mapElement={<div style={{ height: `100%` }} />}
             />
           </div>
