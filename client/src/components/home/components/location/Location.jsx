@@ -9,6 +9,7 @@ const ScrollElement = Scroll.Element;
 */
 
 const Location = () => {
+  console.log(process.env);
   return (
     <ScrollElement name="location" id="location">
       <div className="row">
