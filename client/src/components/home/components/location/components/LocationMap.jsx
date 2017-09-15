@@ -1,5 +1,5 @@
 import React from 'react';
-import { compose, withProps, withStateHandlers } from 'recompose';
+import { compose, withStateHandlers } from 'recompose';
 import {
   withScriptjs,
   withGoogleMap,
@@ -15,7 +15,7 @@ const LocationMap = compose(
       isOpen: false
     }),
     {
-      onToggleOpen: ({ isOpen }) => () => ({
+      toggleInfoWindow: ({ isOpen }) => () => ({
         isOpen: !isOpen
       })
     }
@@ -24,15 +24,15 @@ const LocationMap = compose(
   withGoogleMap
 )(props =>
   <GoogleMap
-    defaultZoom={14}
-    defaultCenter={{ lat: 34.001866, lng: -83.9684561 }}
+    defaultZoom={15}
+    defaultCenter={{ lat: 34.004436, lng: -83.968197 }}
   >
     <Marker
-      position={{ lat: 34.001866, lng: -83.9684561 }}
-      onClick={props.onToggleOpen}
+      position={{ lat: 34.004436, lng: -83.968197 }}
+      onClick={props.toggleInfoWindow}
     >
       {props.isOpen &&
-        <InfoWindow onCloseClick={props.onToggleOpen}>
+        <InfoWindow onCloseClick={props.toggleInfoWindow}>
           <MapLabel />
         </InfoWindow>}
     </Marker>
