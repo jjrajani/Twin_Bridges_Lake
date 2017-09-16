@@ -9,6 +9,7 @@ import {
     Gallery,
     Rules,
     OurFish,
+    Deals,
     Footer,
     PageNotFound
 } from './';
@@ -26,6 +27,7 @@ const App = ({ fetchUser }) => {
                         <Route exact path="/gallery" component={Gallery} />
                         <Route exact path="/rules" component={Rules} />
                         <Route exact path="/our_fish" component={OurFish} />
+                        <Route exact path="/deals" component={Deals} />
                         <Route component={PageNotFound} />
                     </Switch>
                 </div>

@@ -5,6 +5,7 @@ import Home from './home/Home';
 import Gallery from './gallery/Gallery';
 import OurFish from './our_fish/OurFish';
 import Rules from './rules/Rules';
+import Deals from './deals/Deals';
 import Footer from './footer/Footer';
 import PageNotFound from './page_not_found/PageNotFound';
 
@@ -17,5 +18,6 @@ export {
     Rules,
     OurFish,
     Footer,
+    Deals,
     PageNotFound
 };

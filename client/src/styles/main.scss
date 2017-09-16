@@ -22,17 +22,17 @@ body {
 ul {
     padding: 0;
 }
-// .navbar-header {
-//   max-width: 100vw;
-// }
-// .navbar-toggle {
-//   margin-right: 30px !important;
-// }
 a:focus,
 button {
     outline: none !important;
 }
+
+.wrapper {
+    min-height: calc(100vh - 100px);
+    position: relative;
+}
 @import 'header.scss';
+@import 'nav.scss';
 @import 'location.scss';
 @import 'admissions.scss';
 @import 'kids_pond.scss';
@@ -41,4 +41,5 @@ button {
 @import 'our_fish.scss';
 @import 'gallery.scss';
 @import 'rules.scss';
+@import 'deals.scss';
 @import 'footer.scss';
