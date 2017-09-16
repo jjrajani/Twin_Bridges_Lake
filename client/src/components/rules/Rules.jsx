@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { ListRules, RulesHeader, SelectLanguage } from './components';
 
 const Rules = () =>
