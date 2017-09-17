@@ -1,4 +1,4 @@
-import ImageList from './ImageList';
 import GalleryHeader from './GalleryHeader';
+import ImageList from './ImageList';
 
-export { ImageList, GalleryHeader };
+export { GalleryHeader, ImageList };

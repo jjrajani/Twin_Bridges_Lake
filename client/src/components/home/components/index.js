@@ -1,8 +1,8 @@
 import AboutUs from './AboutUs';
+import Admissions from './Admissions';
 import Contact from './Contact';
 import Hours from './Hours';
-import Admissions from './Admissions';
-import Location from './location/Location';
 import KidsPond from './KidsPond';
+import Location from './location/Location';
 
-export { AboutUs, Contact, Hours, Admissions, Location, KidsPond };
+export { AboutUs, Admissions, Contact, Hours, KidsPond, Location };

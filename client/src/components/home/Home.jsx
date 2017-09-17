@@ -1,11 +1,11 @@
 import React from 'react';
 import {
     AboutUs,
+    Admissions,
     Contact,
     Hours,
-    Admissions,
-    Location,
-    KidsPond
+    KidsPond,
+    Location
 } from './components';
 
 const Home = () => {
