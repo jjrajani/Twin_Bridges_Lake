@@ -1,63 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../actions';
+import { GalleryHeader, ImageList } from './components';
 
-class Gallery extends Component {
-    componentDidMount() {
-        this.props.fetchPics();
-    }
-    render() {
-        return (
-            <div className="gallery">
-                <div className="row">
-                    <div className="col-xs-12">
-                        <div className="logo">
-                            <i className="fa fa-camera-retro" />
-                            <h1>Gallery</h1>
-                        </div>
-                        <p>
-                            Checkout some of the fish that were caught at Twin
-                            Bridges Lake.
-                        </p>
-                        <p>
-                            Email pictures of your catches to{' '}
-                            <a href="mailto:twin.bridges.lake.fishing@gmail.com">
-                                twin.bridges.lake.fishing@gmail.com
-                            </a>{' '}
-                            and we will add them to the gallery!
-                        </p>
-                    </div>
-                    <div className="col-xs-12">
-                        <ul className="image_list">
-                            {this.props.pics.map(p => {
-                                return (
-                                    <a
-                                        href={p}
-                                        className="img_wrapper col-xs-12 col-sm-6 col-md-4"
-                                    >
-                                        <li
-                                            key={p}
-                                            className="image_item"
-                                            style={{
-                                                backgroundImage: `url(${p})`
-                                            }}
-                                        />
-                                    </a>
-                                );
-                            })}
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
+const Gallery = () =>
+    <div className="gallery">
+        <div className="row">
+            <GalleryHeader />
+            <ImageList />
+        </div>
+    </div>;
 
-function mapStateToProps({ pics }) {
-    return { pics };
-}
-
-export default connect(mapStateToProps, {
-    fetchPics: actions.picsActions.fetchPics,
-    selectImage: actions.galleryActions.selectImage
-})(Gallery);
+export default Gallery;
