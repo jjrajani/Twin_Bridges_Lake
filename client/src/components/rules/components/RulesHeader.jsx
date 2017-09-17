@@ -3,12 +3,10 @@ import { connect } from 'react-redux';
 
 const ListRules = ({ language }) =>
     <div className="col-xs-12 col-sm-6">
-        <div className="logo">
+        <h1>
             <i className="fa fa-list" />
-            <h1>
-                {language === 'english' ? 'Rules' : 'Reglas'}
-            </h1>
-        </div>
+            {language === 'english' ? 'Rules' : 'Reglas'}
+        </h1>
     </div>;
 
 function mapStateToProps({ language }) {

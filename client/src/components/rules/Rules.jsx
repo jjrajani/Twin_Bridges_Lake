@@ -6,8 +6,8 @@ const Rules = () =>
         <div className="row">
             <RulesHeader />
             <SelectLanguage />
+            <ListRules />
         </div>
-        <ListRules />
     </div>;
 
 export default Rules;
