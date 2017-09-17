@@ -16,20 +16,20 @@ const Admissions = () =>
                 </h1>
                 <ul className="admissions_list blurb_pad">
                     <li className="admissions_list_item">
-                        <p className="item">Adults</p>
-                        <p className="price">$12</p>
+                        <p>Adults</p>
+                        <p>$12</p>
                     </li>
                     <li className="admissions_list_item">
-                        <p className="item">Kids (under 12)</p>
-                        <p className="price">$5</p>
+                        <p>Kids (under 12)</p>
+                        <p>$5</p>
                     </li>
                     <li className="admissions_list_item">
-                        <p className="item">Kids (under 5)</p>
-                        <p className="price">Free</p>
+                        <p>Kids (under 5)</p>
+                        <p>Free</p>
                     </li>
                     <li className="admissions_list_item">
-                        <p className="item">Rental Rods</p>
-                        <p className="price">$5</p>
+                        <p>Rental Rods</p>
+                        <p>$5</p>
                     </li>
                 </ul>
                 <p className="blurb_pad small_text">
