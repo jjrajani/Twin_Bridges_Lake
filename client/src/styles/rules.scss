@@ -1,27 +1,31 @@
 @import 'media_queries.scss';
 
 .rules {
-  margin-bottom: 50px;
-  .logo {
-    display: flex;
-    align-items: flex-end;
-    margin: 2rem 0;
-    i {
-      font-size: 4rem;
-      margin: 0 10px 0 0;
+    margin-bottom: 50px;
+    .logo {
+        display: flex;
+        align-items: flex-end;
+        margin: 2rem 0;
+        i {
+            font-size: 4rem;
+            margin: 0 10px 0 0;
+        }
+        h1 {
+            margin: 0;
+        }
     }
-    h1 {
-      margin: 0;
+    .buttons {
+        text-align: right;
+        margin-top: 2rem;
+        button {
+            margin-left: 2rem;
+        }
     }
-  }
-  .buttons {
-    text-align: right;
-    margin-top: 2rem;
-    button {
-      margin-left: 2rem;
+    .rules_list {
+        margin-top: 3rem;
     }
-  }
-  .rules_list {
-    margin-top: 3rem;
-  }
+    .no_glass_bottles {
+        margin-top: 4rem;
+        // margin-bottom: -3rem;
+    }
 }
