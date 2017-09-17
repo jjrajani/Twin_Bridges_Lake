@@ -1,4 +1,0 @@
-export default {
-  SELECT_IMAGE: 'SELECT_IMAGE',
-  TOGGLE_MODAL: 'TOGGLE_MODAL'
-};

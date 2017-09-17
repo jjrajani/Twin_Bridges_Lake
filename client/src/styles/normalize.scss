@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    color: #111;
+    font-size: 1.75rem;
+    letter-spacing: 0.05rem;
+    font-family: 'Raleway', sans-serif;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    padding: 0;
+}
+a:focus,
+button {
+    outline: none !important;
+}
+.bold {
+    font-weight: 600;
+}
+.small_text {
+    font-size: 1.3rem;
+}

@@ -1,37 +1,5 @@
-* {
-    box-sizing: border-box;
-}
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-* {
-    color: #111;
-    font-size: 1.75rem;
-    letter-spacing: 0.05rem;
-    font-family: 'Raleway', sans-serif;
-}
-.bold {
-    font-weight: 600;
-}
-.small_text {
-    font-size: 1.3rem;
-}
-ul {
-    padding: 0;
-}
-a:focus,
-button {
-    outline: none !important;
-}
-
-.wrapper {
-    min-height: calc(100vh - 100px);
-    position: relative;
-}
-
+@import 'layout.scss';
+@import 'normalize.scss';
 @import 'header.scss';
 @import 'nav.scss';
 @import 'location.scss';
@@ -42,5 +10,4 @@ button {
 @import 'our_fish.scss';
 @import 'gallery.scss';
 @import 'rules.scss';
-@import 'deals.scss';
 @import 'footer.scss';
