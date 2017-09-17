@@ -1,6 +1,6 @@
 import React from 'react';
-import FISH_ICON from './images/fish_icon.png';
-import FishList from './FishList';
+import FISH_ICON from '../../assets/fish_icon.png';
+import { FishList } from './components';
 
 const OurFish = () => {
     return (
