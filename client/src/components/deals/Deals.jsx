@@ -2,7 +2,7 @@ import React from 'react';
 import { GroupDiscount, LadiesNight } from './components';
 
 const Deals = () =>
-    <div className="deals">
+    <div className="deals main_content">
         <div className="row">
             <h1>
                 <i className="fa fa-ticket" />

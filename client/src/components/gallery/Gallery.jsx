@@ -2,7 +2,7 @@ import React from 'react';
 import { GalleryHeader, ImageList } from './components';
 
 const Gallery = () =>
-    <div className="gallery">
+    <div className="gallery main_content">
         <div className="row">
             <GalleryHeader />
             <ImageList />

@@ -1,19 +1,5 @@
 .gallery {
-    margin-bottom: 50px;
-    .logo {
-        display: flex;
-        align-items: flex-end;
-        margin: 2rem 0;
-        i {
-            font-size: 4rem;
-            margin: 0 10px 0 0;
-        }
-        h1 {
-            margin: 0;
-        }
-    }
     .image_list {
-        padding: 0;
         list-style: none;
         .img_wrapper {
             padding: 1rem;

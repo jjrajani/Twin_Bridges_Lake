@@ -3,7 +3,7 @@ import FISH_ICON from '../../assets/fish_icon.png';
 import { FishList } from './components';
 
 const OurFish = () =>
-    <div className="our_fish">
+    <div className="our_fish main_content">
         <div className="row">
             <div className="col-xs-12">
                 <div className="logo">

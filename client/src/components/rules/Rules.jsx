@@ -2,7 +2,7 @@ import React from 'react';
 import { ListRules, RulesHeader, SelectLanguage } from './components';
 
 const Rules = () =>
-    <div className="rules">
+    <div className="rules main_content">
         <div className="row">
             <RulesHeader />
             <SelectLanguage />
