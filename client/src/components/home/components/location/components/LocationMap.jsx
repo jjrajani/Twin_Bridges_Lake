@@ -8,6 +8,7 @@ import {
     InfoWindow
 } from 'react-google-maps';
 import MapLabel from './MapLabel.js';
+/* Get window width to determine map zoom level */
 const windowWidth = window.innerWidth;
 const zoomLevel = windowWidth < 576 ? 13 : 14;
 

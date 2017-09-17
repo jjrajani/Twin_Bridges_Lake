@@ -3,27 +3,24 @@ import Scroll from 'react-scroll';
 const ScrollElement = Scroll.Element;
 /*
   Scroll Element works in conjunction with Navigation HomeDropDown scroll settings
-  see src/components/nav/components/HomeDropDown
+  see src/components/nav
 */
-const Hours = () => {
-  return (
+const Hours = () =>
     <ScrollElement name="hours" id="hours">
-      <div className="row">
-        <hr className="hr-extra-bottom-padding" />
-        <div className="col-md-12">
-          <h1>
-            <i className="fa fa-clock-o" />
-            Hours of Operation
-          </h1>
-          <p className="blurb_pad">Open 24/7</p>
-          <p className="blurb_pad">
-            You read that right. Because the largest Catfish bite at night, Twin
-            Bridges Lake stays open all the time.
-          </p>
+        <div className="row">
+            <hr className="hr-extra-bottom-padding" />
+            <div className="col-md-12">
+                <h1>
+                    <i className="fa fa-clock-o" />
+                    Hours of Operation
+                </h1>
+                <p className="blurb_pad">Open 24/7</p>
+                <p className="blurb_pad">
+                    You read that right. Because the largest Catfish bite at
+                    night, Twin Bridges Lake stays open all the time.
+                </p>
+            </div>
         </div>
-      </div>
-    </ScrollElement>
-  );
-};
+    </ScrollElement>;
 
 export default Hours;
