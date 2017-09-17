@@ -23,6 +23,9 @@ img {
 }
 h1 i {
     margin-right: 1rem;
+    &.fa-users {
+        font-size: 2.75rem;
+    }
 }
 .bold {
     font-weight: 600;
