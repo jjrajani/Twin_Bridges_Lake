@@ -15,4 +15,5 @@ const Deals = () =>
         <GroupDiscount />
         <LadiesNight />
     </div>;
+
 export default Deals;
