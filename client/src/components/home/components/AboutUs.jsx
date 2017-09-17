@@ -9,10 +9,10 @@ const AboutUs = () =>
     <ScrollElement name="about_us" id="about_us">
         <div className="row">
             <div className="col-md-12">
-                <h1>
+                <div className="header">
                     <i className="fa fa-info-circle" />
-                    About Us
-                </h1>
+                    <h1>About Us</h1>
+                </div>
                 <p className="blurb_pad">
                     Twin Bridges Lake features a 10 acre lake stocked with
                     Catfish. The fish in our lake range anywhere from 1/2 pound

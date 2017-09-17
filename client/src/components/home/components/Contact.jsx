@@ -10,10 +10,11 @@ const Contact = () =>
         <div className="row">
             <hr className="hr-extra-bottom-padding" />
             <div className="col-md-12">
-                <h1>
+                <div className="header">
                     <i className="fa fa-mobile" />
-                    Contact
-                </h1>
+                    <h1>Contact</h1>
+                </div>
+
                 <p className="blurb_pad">
                     Please feel free to contact us if you have any questions,
                     comments, or concerns.

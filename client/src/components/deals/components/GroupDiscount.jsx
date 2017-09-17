@@ -4,10 +4,11 @@ const GroupDiscount = () =>
     <div className="row">
         <hr className="hr-extra-bottom-padding" />
         <div className="col-xs-12">
-            <h1>
+            <div className="header">
                 <i className="fa fa-users" />
-                Group Discount
-            </h1>
+                <h1>Group Discount</h1>
+            </div>
+
             <p className="blurb_pad">
                 Groups of 10 or more people pay $10 per Adult.
             </p>

@@ -5,10 +5,10 @@ const Deals = () =>
     <div className="deals main_content">
         <div className="row">
             <div className="col-xs-12">
-                <h1>
+                <div className="header">
                     <i className="fa fa-ticket" />
-                    Deals
-                </h1>
+                    <h1>Deals</h1>
+                </div>
             </div>
             <div className="col-xs-12">
                 <p className="blurb_pad">Check here regularly for new deals.</p>

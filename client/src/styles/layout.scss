@@ -4,4 +4,19 @@
     .main_content {
         margin-bottom: 50px;
     }
+    .header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: baseline;
+        h1 {
+            margin: 1.5rem 0;
+        }
+        i {
+            font-size: 3.5rem;
+            width: 40px;
+            &.fa-users {
+                font-size: 3rem;
+            }
+        }
+    }
 }

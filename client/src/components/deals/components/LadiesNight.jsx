@@ -4,10 +4,10 @@ const LadiesNight = () =>
     <div className="row">
         <hr className="hr-extra-bottom-padding" />
         <div className="col-xs-12">
-            <h1>
+            <div className="header">
                 <i className="fa fa-female" />
-                Ladies Night
-            </h1>
+                <h1>Ladies Night</h1>
+            </div>
             <p className="blurb_pad">Wednesday nights ladies pay half price.</p>
         </div>
     </div>;

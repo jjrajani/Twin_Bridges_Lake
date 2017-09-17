@@ -10,10 +10,11 @@ const KidsPond = () =>
         <div className="row">
             <hr className="hr-extra-bottom-padding" />
             <div className="col-md-12">
-                <h1>
+                <div className="header">
                     <i className="fa fa-child" />
-                    Kids Pond
-                </h1>
+                    <h1>Kids Pond</h1>
+                </div>
+
                 <p className="blurb_pad">
                     We have a kids pond that is overstocked so the kids are
                     guaranteed to catch.

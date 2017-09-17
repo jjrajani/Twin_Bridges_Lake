@@ -2,10 +2,11 @@ import React from 'react';
 
 const GalleryHeader = () =>
     <div className="col-xs-12">
-        <h1>
+        <div className="header">
             <i className="fa fa-camera-retro" />
-            Gallery
-        </h1>
+            <h1>Gallery</h1>
+        </div>
+
         <p>Checkout some of the fish that were caught at Twin Bridges Lake.</p>
         <p>
             Email pictures of your catches to{' '}

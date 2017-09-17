@@ -1,14 +1,9 @@
 @import 'media_queries.scss';
 
 .our_fish {
-    h1 {
-        display: flex;
-        justify-content: flex-start;
-        align-items: baseline;
-    }
     .fish_icon {
-        width: 50px;
-        margin: 0 1rem 0 0;
+        width: 40px;
+        margin: 2rem 1rem 0 0;
     }
     .fish_list {
         margin-top: 2rem;

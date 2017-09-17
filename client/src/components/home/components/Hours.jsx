@@ -10,10 +10,11 @@ const Hours = () =>
         <div className="row">
             <hr className="hr-extra-bottom-padding" />
             <div className="col-md-12">
-                <h1>
+                <div className="header">
                     <i className="fa fa-clock-o" />
-                    Hours of Operation
-                </h1>
+                    <h1>Hours of Operation</h1>
+                </div>
+
                 <p className="blurb_pad">Open 24/7</p>
                 <p className="blurb_pad">
                     You read that right. Because the largest Catfish bite at

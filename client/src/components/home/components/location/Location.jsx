@@ -13,10 +13,10 @@ const Location = () =>
         <div className="row">
             <hr className="hr-extra-bottom-padding" />
             <div className="col-md-12">
-                <h1>
-                    <i className="fa fa-map-marker blurb_icon_pad" />Our
-                    Location
-                </h1>
+                <div className="header">
+                    <i className="fa fa-map-marker" />
+                    <h1>Our Location</h1>
+                </div>
                 <p className="blurb_pad">
                     We are located 1 mile down Hwy 124 from Hwy 20 (Buford Dr)
                     in Lawrenceville.

@@ -10,10 +10,11 @@ const Admissions = () =>
         <div className="row">
             <hr className="hr-extra-bottom-padding" />
             <div className="col-md-12">
-                <h1>
+                <div className="header">
                     <i className="fa fa-ticket" />
-                    Admissions
-                </h1>
+                    <h1>Admissions</h1>
+                </div>
+
                 <ul className="admissions_list blurb_pad">
                     <li className="admissions_list_item">
                         <p>Adults</p>
