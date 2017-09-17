@@ -6,14 +6,14 @@ const OurFish = () =>
     <div className="our_fish main_content">
         <div className="row">
             <div className="col-xs-12">
-                <div className="logo">
+                <h1>
                     <img
                         src={FISH_ICON}
                         className="fish_icon"
                         alt="our fish icon"
                     />
-                    <h1>Our Fish</h1>
-                </div>
+                    Our Fish
+                </h1>
                 <p>
                     Twin Bridges Lake is regularly stocked with farm raised
                     catfish to insure the best eating quality. We also
@@ -21,7 +21,7 @@ const OurFish = () =>
                     those thrill seeking anglers.
                 </p>
                 <div className="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
-                    <div className="alert alert-success text-center">
+                    <div className="alert alert-success text-center top_pad">
                         We do not feed our fish so you know they're always
                         biting.
                     </div>
