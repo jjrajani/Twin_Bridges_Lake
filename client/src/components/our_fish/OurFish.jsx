@@ -11,8 +11,8 @@ class OurFish extends Component {
     render() {
         return (
             <div
-                itemscope
-                itemtype="http://twinbridgeslake.fish/Fish"
+                itemScope
+                itemType="http://twinbridgeslake.fish/Fish"
                 className="our_fish main_content"
             >
                 <div className="row">
