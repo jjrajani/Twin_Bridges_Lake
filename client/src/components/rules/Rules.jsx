@@ -1,13 +1,22 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { setAndSendPageview } from '../../googleAnalytics';
 import { ListRules, RulesHeader, SelectLanguage } from './components';
 
-const Rules = () =>
-    <div className="rules main_content">
-        <div className="row">
-            <RulesHeader />
-            <SelectLanguage />
-            <ListRules />
-        </div>
-    </div>;
+class Rules extends Component {
+    componentDidMount() {
+        setAndSendPageview(window, '/rules');
+    }
+    render() {
+        return (
+            <div className="rules main_content">
+                <div className="row">
+                    <RulesHeader />
+                    <SelectLanguage />
+                    <ListRules />
+                </div>
+            </div>
+        );
+    }
+}
 
 export default Rules;

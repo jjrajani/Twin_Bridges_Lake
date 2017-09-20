@@ -7,7 +7,7 @@ const FishWithLink = (f, i, style) =>
                 <div className="img_wrapper">
                     <img src={f.img} alt={f.linkAlt} />
                 </div>
-                <p>
+                <p itemprop="description">
                     {f.text}
                 </p>
             </a>
