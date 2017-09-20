@@ -10,11 +10,7 @@ class OurFish extends Component {
 
     render() {
         return (
-            <div
-                itemScope
-                itemType="http://twinbridgeslake.fish/Fish"
-                className="our_fish main_content"
-            >
+            <div className="our_fish main_content">
                 <div className="row">
                     <div className="col-xs-12">
                         <div className="header">
@@ -23,7 +19,7 @@ class OurFish extends Component {
                                 className="fish_icon"
                                 alt="Twin Bridges Lake fish icon"
                             />
-                            <h1 itemprop="name">Our Fish</h1>
+                            <h1>Our Fish</h1>
                         </div>
                         <p>
                             Twin Bridges Lake is regularly stocked with farm
