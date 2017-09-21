@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { setAndSendPageview } from '../../googleAnalytics';
+import { setAndSendPageview } from '../../utils/googleAnalytics';
 import FISH_ICON from '../../assets/fish_icon.png';
 import { FishList } from './components';
 

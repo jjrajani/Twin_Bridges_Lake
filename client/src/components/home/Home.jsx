@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { setAndSendPageview } from '../../googleAnalytics';
+import { setAndSendPageview } from '../../utils/googleAnalytics';
 import {
     AboutUs,
     Admissions,

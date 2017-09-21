@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { GalleryHeader, ImageList } from './components';
-import { setAndSendPageview } from '../../googleAnalytics';
+import { setAndSendPageview } from '../../utils/googleAnalytics';
 
 class Gallery extends Component {
     componentDidMount() {
