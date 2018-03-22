@@ -10,7 +10,7 @@ const GroupDiscount = () =>
             </div>
 
             <p className="blurb_pad">
-                Groups of 10 or more people pay $10 per Adult.
+                20% off admission for groups of 10 or more.
             </p>
         </div>
     </div>;
