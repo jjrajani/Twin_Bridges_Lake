@@ -2,7 +2,7 @@ import React from 'react';
 
 const MapLabel = () =>
     <div>
-        <h1>Twin Bridges Lake</h1>
+        <h2>Twin Bridges Lake</h2>
         <div>
             <p>Open 24/7</p>
             <p>

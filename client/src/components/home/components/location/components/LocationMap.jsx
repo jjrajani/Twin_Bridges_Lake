@@ -10,7 +10,7 @@ import {
 import MapLabel from './MapLabel.js';
 /* Get window width to determine map zoom level */
 const windowWidth = window.innerWidth;
-const zoomLevel = windowWidth < 576 ? 13 : 14;
+const zoomLevel = 16;
 
 const LocationMap = compose(
     withStateHandlers(
@@ -31,7 +31,7 @@ const LocationMap = compose(
         defaultCenter={{ lat: 34.004436, lng: -83.968197 }}
     >
         <Marker
-            position={{ lat: 34.004436, lng: -83.968197 }}
+            position={{ lat: 34.004136, lng: -83.968147 }}
             onClick={props.toggleInfoWindow}
         >
             {props.isOpen &&
