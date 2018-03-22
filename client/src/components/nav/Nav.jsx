@@ -10,14 +10,28 @@ const scroller = Scroll.scroller;
   see https://react-bootstrap.github.io/components.html#navbars
 */
 class Navigation extends Component {
+  componentDidMount() {
+    if ('ontouchend' in window) {
+      document.body.style.cursor = 'pointer';      
+    }
+    window.addEventListener('click', this.toggle);
+  }
+  toggle = e => {
+    if (this.refs.wrapper.contains(e.target)) {
+      return;
+    } else if (this._toggle.context.$bs_navbar.expanded) {
+      this._toggle.context.$bs_navbar.onToggle();
+    }
+  }
     render() {
         return (
+          <div ref="wrapper">
             <Navbar fixedTop collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="/">Twin Bridges Lake</a>
                     </Navbar.Brand>
-                    <Navbar.Toggle />
+                    <Navbar.Toggle ref={c => this._toggle = c} onClick={this.toggle}/>
                 </Navbar.Header>
                 <Navbar.Collapse>
                     <Nav>
@@ -112,6 +126,7 @@ class Navigation extends Component {
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>
+          </div>
         );
     }
 }
