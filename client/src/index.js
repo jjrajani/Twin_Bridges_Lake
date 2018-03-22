@@ -8,6 +8,8 @@ import http from 'http';
 
 import { App } from './components';
 import reducers from './reducers';
+import 'bootstrap3/dist/css/bootstrap.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 http.get('http://www.twinbridgeslake.fish');

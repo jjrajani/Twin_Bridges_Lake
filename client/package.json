@@ -16,6 +16,8 @@
   },
   "dependencies": {
     "axios": "^0.16.2",
+    "bootstrap3": "^3.3.5",
+    "font-awesome": "^4.7.0",
     "materialize-css": "^0.100.1",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",

@@ -15,7 +15,6 @@ import {
 } from './';
 
 const App = ({ fetchUser }) => {
-    fetchUser();
     return (
         <div className="wrapper">
             <Nav />
