@@ -1,0 +1,6 @@
+[
+  {"href": "/our_fish", "text": "Our Fish"},
+  {"href": "/gallery", "text": "Gallery"},
+  {"href": "/rules", "text": "Rules"},
+  {"href": "/deals", "text": "Deals", "className": "deals_link"}
+]

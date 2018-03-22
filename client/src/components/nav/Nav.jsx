@@ -1,28 +1,11 @@
-import React, { Component } from 'react';
-import { Navbar, Nav, NavDropdown, MenuItem } from 'react-bootstrap';
-import Scroll from 'react-scroll';
-import scrollPadding from '../home/utils/scrollOptions';
-
-const scroller = Scroll.scroller;
-// import { HomeDropDown } from './components';
+import React from 'react';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import NavStore from './NavStore';
 /*
   Navbar uses react-bootstrap
   see https://react-bootstrap.github.io/components.html#navbars
 */
-class Navigation extends Component {
-  componentDidMount() {
-    if ('ontouchend' in window) {
-      document.body.style.cursor = 'pointer';      
-    }
-    window.addEventListener('click', this.toggle);
-  }
-  toggle = e => {
-    if (this.refs.wrapper.contains(e.target)) {
-      return;
-    } else if (this._toggle.context.$bs_navbar.expanded) {
-      this._toggle.context.$bs_navbar.onToggle();
-    }
-  }
+class Navigation extends NavStore {
     render() {
         return (
           <div ref="wrapper">
@@ -40,89 +23,9 @@ class Navigation extends Component {
                             title="Home"
                             id="basic-nav-dropdown"
                         >
-                            <MenuItem
-                                eventKey={1.1}
-                                href="/#about_us"
-                                onClick={() =>
-                                    scroller.scrollTo(
-                                        'about_us',
-                                        scrollPadding.header
-                                    )}
-                            >
-                                About Us
-                            </MenuItem>
-                            <MenuItem
-                                eventKey={1.2}
-                                href="/#location"
-                                onClick={() =>
-                                    scroller.scrollTo(
-                                        'location',
-                                        scrollPadding.headerAndHorizLine
-                                    )}
-                            >
-                                Location
-                            </MenuItem>
-                            <MenuItem
-                                eventKey={1.3}
-                                href="/#hours"
-                                onClick={() =>
-                                    scroller.scrollTo(
-                                        'hours',
-                                        scrollPadding.headerAndHorizLine
-                                    )}
-                            >
-                                Hours
-                            </MenuItem>
-                            <MenuItem
-                                eventKey={1.3}
-                                href="/#admissions"
-                                onClick={() =>
-                                    scroller.scrollTo(
-                                        'kids_pond',
-                                        scrollPadding.headerAndHorizLine
-                                    )}
-                            >
-                                Kids Pond
-                            </MenuItem>
-                            <MenuItem
-                                eventKey={1.3}
-                                href="/#admissions"
-                                onClick={() =>
-                                    scroller.scrollTo(
-                                        'admissions',
-                                        scrollPadding.headerAndHorizLine
-                                    )}
-                            >
-                                Admissions
-                            </MenuItem>
-                            <MenuItem
-                                eventKey={1.4}
-                                href="/#contact"
-                                onClick={() =>
-                                    scroller.scrollTo(
-                                        'contact',
-                                        scrollPadding.headerAndHorizLine
-                                    )}
-                            >
-                                Contact
-                            </MenuItem>
+                            {this.renderDropDownItems()}
                         </NavDropdown>
-                        <MenuItem eventKey={2} href="/our_fish">
-                            Our Fish
-                        </MenuItem>
-                        <MenuItem eventKey={3} href="/gallery">
-                            Gallery
-                        </MenuItem>
-                        <MenuItem eventKey={4} href="/rules">
-                            Rules
-                        </MenuItem>
-                        <MenuItem
-                            eventKey={4}
-                            href="/deals"
-                            className="deals_link"
-                        >
-                            Deals
-                        </MenuItem>
+                        {this.renderPlainMenuItems()}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

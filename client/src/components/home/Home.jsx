@@ -8,10 +8,19 @@ import {
     KidsPond,
     Location
 } from './components';
+import Scroll from 'react-scroll';
+
+import scrollPoints from '../home/utils/scrollPoints';
+
+const scroller = Scroll.scroller;
 
 class Home extends Component {
     componentDidMount() {
-        setAndSendPageview(window, '/home');
+      if (window.location.hash === '#about_us') {
+        const { to, pad } = scrollPoints["#about_us"];
+        scroller.scrollTo( to, {...pad, offset: -51} );
+      }
+      setAndSendPageview(window, '/home');
     }
     render() {
         return (

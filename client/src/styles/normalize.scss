@@ -28,7 +28,10 @@ img {
     font-size: 1.3rem;
 }
 .blurb_pad {
-    margin-left: calc(42px);
+  margin-left: 42px;
+  @media screen and (max-width: 767px) {
+    margin-left: 0;
+  }
 }
 .top_pad {
     margin-top: 2rem;

@@ -6,6 +6,9 @@
             width: 20px;
             text-align: center;
         }
+        @media screen and (max-width: 767px) {
+          margin: 0;
+        }
     }
     .contact_info {
         padding-top: 1rem;
