@@ -1,11 +1,18 @@
-// BASE_URL https://api.flickr.com/services/rest
+const request = require("request");
+const keys = require("../config/keys");
 
-// METHOD ?method=flickr.photos.getRecent
-// KEY &api_key=29224b1aa64ce41ffc9966ef92598e22&per_page=10&format=json&nojsoncallback=1
+const KEY = keys.flickr_api_key;
+const USER_ID = keys.flickr_user_id;
+const method = "flickr.people.getPublicPhotos";
+const perPage = "50";
 
 module.exports = app => {
-  app.get('/api/gallery', (req, res) => {
-    console.log('getting gallery');
-    res.send('Gallery');
+  app.get("/api/gallery", (req, res) => {
+    request(
+      `https://api.flickr.com/services/rest/?method=${method}&api_key=${KEY}&user_id=${USER_ID}&per_page=${perPage}&format=json&nojsoncallback=1`,
+      (err, response, body) => {
+        res.send(body);
+      }
+    );
   });
 };

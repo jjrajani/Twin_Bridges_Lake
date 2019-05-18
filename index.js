@@ -1,12 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
-const cookieSession = require('cookie-session');
-const passport = require('passport');
-const keys = require('./config/keys');
+const express = require("express");
+const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
+const cookieSession = require("cookie-session");
+const passport = require("passport");
+const keys = require("./config/keys");
 /* Models */
-require('./models/User');
-require('./models/Review');
+require("./models/User");
+require("./models/Review");
 /* Connect mongoose to our MongoDB on mLab*/
 mongoose.connect(keys.mongoURI);
 
@@ -28,29 +28,25 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 /* Auth Services */
 // require('./services/passportGoogle');
-require('./services/passportFacebook');
+require("./services/passportFacebook");
 
 /* Auth Routes */
 // require('./routes/authGoogleRoutes')(app);
-require('./routes/authFacebookRoutes')(app);
-require('./routes/currentUserRoutes')(app);
-require('./routes/reviewsRoutes')(app);
-require('./routes/galleryRoutes')(app);
-require('./routes/directionsRoutes')(app);
-//
-// app.get('/', (req, res) => {
-//   res.send('Hello There');
-// });
+require("./routes/authFacebookRoutes")(app);
+require("./routes/currentUserRoutes")(app);
+require("./routes/reviewsRoutes")(app);
+require("./routes/galleryRoutes")(app);
+require("./routes/directionsRoutes")(app);
 
-if (process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === "production") {
   // Express will server produciton assets
   // like main.js or main.css
-  app.use(express.static('client/build'));
+  app.use(express.static("client/build"));
   // Express will server index.html if doesn't
   // recognize route
-  const path = require('path');
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  const path = require("path");
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
   });
 }
 
@@ -60,5 +56,5 @@ if (process.env.NODE_ENV === 'production') {
 */
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log('App Listening on PORT 5000');
+  console.log("App Listening on PORT 5000");
 });
