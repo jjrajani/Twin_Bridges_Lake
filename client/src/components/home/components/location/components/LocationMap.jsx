@@ -9,7 +9,7 @@ import {
 } from 'react-google-maps';
 import MapLabel from './MapLabel.js';
 /* Get window width to determine map zoom level */
-const windowWidth = window.innerWidth;
+// const windowWidth = window.innerWidth;
 const zoomLevel = 16;
 
 const LocationMap = compose(

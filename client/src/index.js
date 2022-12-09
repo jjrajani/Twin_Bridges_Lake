@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk';
 import './styles/main.css';
-import http from 'http';
+// import http from 'http';
 
 import { App } from './components';
 import reducers from './reducers';
